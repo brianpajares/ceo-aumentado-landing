@@ -510,12 +510,12 @@
   </div>
 </footer>
 
-<script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2" defer></script>
+<script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2"></script>
 <script>
   // SUPABASE CONFIG
   const SUPABASE_URL = "https://guwmnpmyeynoywuhmyrd.supabase.co";
   const SUPABASE_PUBLIC_KEY = "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6Imd1d21ucG15ZXlub3l3dWhteXJkIiwicm9sZSI6ImFub24iLCJpYXQiOjE3NzczOTM0ODgsImV4cCI6MjA5Mjk2OTQ4OH0.SiETcYYxoK57beA8vPu9r9hUYfRp8-3RSlyFuNJ4RxQ";
-  const supabase = window.supabase.createClient(SUPABASE_URL, SUPABASE_PUBLIC_KEY);
+  const db = window.supabase.createClient(SUPABASE_URL, SUPABASE_PUBLIC_KEY);
 
   // UTILS: Captura de metadatos para atribución y analítica
   const urlParams = new URLSearchParams(window.location.search);
@@ -529,7 +529,7 @@
   // FUNCIÓN GENÉRICA PARA REGISTRAR EVENTOS
   async function trackEvent(eventName, eventData = {}) {
     try {
-      await supabase.from('events_ceo_aumentado').insert([{
+      await db.from('events_ceo_aumentado').insert([{
         event_name: eventName,
         utm_source: utm_source,
         utm_medium: utm_medium,
@@ -608,7 +608,7 @@
       msg.style.display = 'none';
 
       try {
-        const { error } = await supabase.from('contacts_ceo_aumentado').insert([{
+        const { error } = await db.from('contacts_ceo_aumentado').insert([{
           nombre:   document.getElementById('contactName').value,
           email:    document.getElementById('contactEmail').value,
           empresa:  document.getElementById('contactEmpresa').value || null,
@@ -660,7 +660,7 @@
 
       try {
         // 1. Guardar el Lead en la tabla leads_ceo_aumentado
-        const { error: leadError } = await supabase.from('leads_ceo_aumentado').insert([{
+        const { error: leadError } = await db.from('leads_ceo_aumentado').insert([{
           nombre: nombre,
           email: email,
           pais: pais,
