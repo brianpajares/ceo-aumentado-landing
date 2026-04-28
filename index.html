@@ -675,11 +675,15 @@
 
         if (leadError) throw leadError;
 
-        // 2. Registrar el evento de conversión lead_submit
-        await trackEvent('lead_submit', { 
-          email: email,
-          pais: pais
-        });
+        // 2. Enviar email con el capítulo via Edge Function
+        fetch('https://guwmnpmyeynoywuhmyrd.supabase.co/functions/v1/send-chapter-email', {
+          method: 'POST',
+          headers: { 'Content-Type': 'application/json' },
+          body: JSON.stringify({ record: { nombre, email, pais } })
+        }).catch(() => {}); // fire-and-forget, no bloquea el flujo
+
+        // 3. Registrar el evento de conversión lead_submit
+        await trackEvent('lead_submit', { email, pais });
 
         // UI State: Éxito
         msg.className = "lead-message success";
