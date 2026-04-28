@@ -44,7 +44,7 @@
       <a href="#metodo">El método</a>
       <a href="#capitulos">Capítulos</a>
       <a href="#autor">El autor</a>
-      <a href="#gratis" class="btn-nav-secondary">Capítulo Gratis</a>
+      <a href="#recursos" class="btn-nav-secondary">Capítulo Gratis</a>
       <a href="#contacto" class="btn-nav-outline">Contacto</a>
     </div>
     <a class="nav-cta" href="#comprar" onclick="goAmazon(event)">Comprar en Amazon →</a>
@@ -527,22 +527,22 @@
   const user_agent = navigator.userAgent;
 
   // FUNCIÓN GENÉRICA PARA REGISTRAR EVENTOS
-  async function trackEvent(eventName, eventData = {}) {
-    try {
-      await db.from('events_ceo_aumentado').insert([{
-        event_name: eventName,
-        utm_source: utm_source,
-        utm_medium: utm_medium,
-        utm_campaign: utm_campaign,
-        referrer: referrer,
-        landing_url: landing_url,
-        user_agent: user_agent,
-        event_data: eventData
-      }]);
-    } catch (err) {
-      console.error("Error tracking event:", err);
-    }
-  }
+<option value="OT">Otro país</option>
+            </select>
+          </div>
+          <div class="form-group checkbox-group">
+            <input type="checkbox" id="leadConsent" required />
+            <label for="leadConsent">Acepto recibir el material y futuras comunicaciones sobre CEO Aumentado. (Cero spam, puedes darte de baja cuando quieras).</label>
+          </div>
+          <button type="submit" id="leadSubmitBtn" class="btn-primary" style="width: 100%; justify-content: center;">
+            Enviar material gratis →
+          </button>
+          <div id="leadMessage" class="lead-message" style="display:none;"></div>
+        </form>
+      </div>
+    </div>
+  </div>
+</section>
 
 <!-- BUY -->
 <section class="buy-section" id="comprar">
@@ -712,7 +712,7 @@
   const SUPABASE_PUBLIC_KEY = "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6Imd1d21ucG15ZXlub3l3dWhteXJkIiwicm9sZSI6ImFub24iLCJpYXQiOjE3NzczOTM0ODgsImV4cCI6MjA5Mjk2OTQ4OH0.SiETcYYxoK57beA8vPu9r9hUYfRp8-3RSlyFuNJ4RxQ";
   const db = window.supabase.createClient(SUPABASE_URL, SUPABASE_PUBLIC_KEY);
 
-  // UTILS: Captura de metadatos para atribución y analítica
+  // UTILS: Metadata
   const urlParams = new URLSearchParams(window.location.search);
   const utm_source = urlParams.get('utm_source') || null;
   const utm_medium = urlParams.get('utm_medium') || null;
@@ -721,68 +721,49 @@
   const landing_url = window.location.href;
   const user_agent = navigator.userAgent;
 
-  // FUNCIÓN GENÉRICA PARA REGISTRAR EVENTOS
   async function trackEvent(eventName, eventData = {}) {
     try {
       await db.from('events_ceo_aumentado').insert([{
         event_name: eventName,
-        utm_source: utm_source,
-        utm_medium: utm_medium,
-        utm_campaign: utm_campaign,
-        referrer: referrer,
-        landing_url: landing_url,
-        user_agent: user_agent,
-        event_data: eventData
+        utm_source, utm_medium, utm_campaign, referrer, landing_url, user_agent, event_data: eventData
       }]);
-    } catch (err) {
-      console.error("Error tracking event:", err);
-    }
+    } catch (err) { console.error(err); }
   }
 
-  // EVENTO: page_view (al cargar la página)
-  window.addEventListener('DOMContentLoaded', () => {
-    trackEvent('page_view');
-  });
+  window.addEventListener('DOMContentLoaded', () => { trackEvent('page_view'); });
 
-  // FUNCIÓN PARA CLIC EN AMAZON
   function goAmazon(e) {
     if (e) e.preventDefault();
     const win = window.open(window.AMAZON_URL, "_blank", "noopener,noreferrer");
-    trackEvent('amazon_click', {
-      button_location: e ? (e.currentTarget.innerText || e.currentTarget.textContent).trim() : 'programmatic'
-    }).catch(() => {});
+    trackEvent('amazon_click', { button: e ? e.currentTarget.innerText : 'direct' });
     return win;
   }
 
-  // Smooth scroll
+  // Nav & Scroll
   document.querySelectorAll('a[href^="#"]').forEach(a => {
     a.addEventListener('click', e => {
-      const id = a.getAttribute('href');
-      if (id.length > 1) {
-        const el = document.querySelector(id);
-        if (el) { e.preventDefault(); el.scrollIntoView({ behavior:'smooth', block:'start' }); }
-      }
+      const el = document.querySelector(a.getAttribute('href'));
+      if (el) { e.preventDefault(); el.scrollIntoView({ behavior:'smooth' }); }
     });
   });
 
-  // Hamburger menu
   const hamburger = document.getElementById('navHamburger');
   const navLinks  = document.getElementById('navLinks');
   if (hamburger && navLinks) {
     hamburger.addEventListener('click', () => {
-      const open = navLinks.classList.toggle('nav-links--open');
-      hamburger.classList.toggle('nav-hamburger--open', open);
+      navLinks.classList.toggle('nav-links--open');
+      hamburger.classList.toggle('nav-hamburger--open');
     });
   }
 
-  // FORMULARIO DE CONTACTO
+  // CONTACT FORM
   const contactForm = document.getElementById('contactForm');
   if (contactForm) {
     contactForm.addEventListener('submit', async (e) => {
       e.preventDefault();
       const btn = document.getElementById('contactSubmitBtn');
       const msg = document.getElementById('contactMessage');
-      const originalBtnText = btn.innerHTML;
+      const originalText = btn.innerHTML;
       btn.disabled = true;
       btn.innerHTML = 'Enviando...';
       try {
@@ -810,19 +791,19 @@
         msg.style.display = 'block';
       } finally {
         btn.disabled = false;
-        btn.innerHTML = originalBtnText;
+        btn.innerHTML = originalText;
       }
     });
   }
 
-  // FORMULARIO DE LEADS (Capítulo Gratis)
+  // LEAD FORM
   const leadForm = document.getElementById('leadForm');
   if (leadForm) {
     leadForm.addEventListener('submit', async (e) => {
       e.preventDefault();
       const btn = document.getElementById('leadSubmitBtn');
       const msg = document.getElementById('leadMessage');
-      const originalBtnText = btn.innerHTML;
+      const originalText = btn.innerHTML;
       btn.disabled = true;
       btn.innerHTML = 'Enviando...';
       try {
@@ -832,25 +813,21 @@
           body: JSON.stringify({
             type: 'lead',
             nombre: document.getElementById('leadName').value,
-            email: document.getElementById('contactEmail').value || document.getElementById('leadEmail').value,
+            email: document.getElementById('leadEmail').value,
             pais: document.getElementById('leadCountry').value,
             consentimiento: document.getElementById('leadConsent').checked,
             metadata: { utm_source, utm_medium, utm_campaign, referrer, landing_url, user_agent }
           })
         });
         if (!response.ok) throw new Error();
-        
-        // MOSTRAR ENLACE DE DESCARGA DIRECTAMENTE
         msg.className = 'lead-message success';
         msg.innerHTML = `
           <strong>¡Registro exitoso!</strong><br/>
-          Haz clic en el botón de abajo para acceder a tu capítulo gratis ahora mismo:<br/>
+          Descarga tu capítulo gratis aquí:<br/>
           <a href="https://drive.google.com/file/d/1GTsGTPQChHbyYxTOacs5BGbBGMmldZB2/view?usp=drive_link" target="_blank" style="display:inline-block; margin-top:15px; padding:12px 24px; background:#e9b949; color:#000; font-weight:bold; text-decoration:none; border-radius:4px;">Descargar Capítulo 1 →</a>
         `;
         msg.style.display = 'block';
-        leadForm.reset();
-        leadForm.style.display = 'none'; // Opcional: oculta el formulario para que solo quede el botón
-        
+        leadForm.style.display = 'none';
       } catch (err) {
         msg.className = 'lead-message error';
         msg.innerHTML = 'Error de conexión. Intenta de nuevo.';

@@ -97,27 +97,39 @@ body::before {
 .nav-links { display: flex; gap: 28px; font-size: 13px; color: var(--ink-1); }
 .nav-links a:hover { color: var(--gold); }
 .nav-links a.btn-nav-secondary {
-  background: rgba(233, 185, 73, 0.1);
+  background: linear-gradient(135deg, rgba(233, 185, 73, 0.2), rgba(233, 185, 73, 0.05));
   color: var(--gold);
-  border: 1px solid rgba(233, 185, 73, 0.3);
-  padding: 8px 16px;
-  border-radius: 6px;
+  border: 1px solid rgba(233, 185, 73, 0.4);
+  padding: 8px 18px;
+  border-radius: 8px;
   font-weight: 600;
-  transition: all 0.3s ease;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+  font-size: 11px;
+  transition: all 0.4s cubic-bezier(0.165, 0.84, 0.44, 1);
+  box-shadow: 0 4px 15px rgba(0,0,0,0.1);
 }
 .nav-links a.btn-nav-secondary:hover {
   background: var(--gold);
-  color: var(--bg-0);
+  color: #1a1300;
+  transform: translateY(-2px);
+  box-shadow: 0 8px 25px rgba(233, 185, 73, 0.3);
 }
 .nav-links a.btn-nav-outline {
-  border: 1px solid rgba(255, 255, 255, 0.2);
-  padding: 8px 16px;
-  border-radius: 6px;
-  transition: all 0.3s ease;
+  background: rgba(255, 255, 255, 0.03);
+  backdrop-filter: blur(10px);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  padding: 8px 18px;
+  border-radius: 8px;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+  font-size: 11px;
+  transition: all 0.4s cubic-bezier(0.165, 0.84, 0.44, 1);
 }
 .nav-links a.btn-nav-outline:hover {
-  border-color: #fff;
-  background: rgba(255, 255, 255, 0.05);
+  border-color: rgba(255, 255, 255, 0.5);
+  background: rgba(255, 255, 255, 0.08);
+  transform: translateY(-2px);
 }
 .nav-cta {
   background: var(--gold);
