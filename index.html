@@ -45,6 +45,7 @@
       <a href="#capitulos">Capítulos</a>
       <a href="#autor">El autor</a>
       <a href="#faq">FAQ</a>
+      <a href="#contacto">Contacto</a>
     </div>
     <a class="nav-cta" href="#comprar" onclick="goAmazon(event)">Comprar en Amazon →</a>
     <button class="nav-hamburger" id="navHamburger" aria-label="Abrir menú" aria-expanded="false">
@@ -231,7 +232,7 @@
   <div class="container">
     <div class="author-block">
       <div class="author-portrait">
-        <div class="author-emblem">BP</div>
+        <img src="assets/autor.png" alt="Brian Pajares" class="author-img">
         <div class="author-name"><b>BRIAN PAJARES</b><span>autor</span></div>
       </div>
       <div class="author-text">
@@ -412,6 +413,78 @@
   </div>
 </section>
 
+<!-- CONTACT -->
+<section id="contacto" style="background:linear-gradient(180deg, var(--bg-0), var(--bg-1))">
+  <div class="container">
+    <div class="section-head">
+      <div class="kicker">Contacto</div>
+      <h2 class="section-title">¿Querés hablar con <span class="it">Brian</span>?</h2>
+      <p class="section-sub">Conferencias, consultoría, entrevistas o simplemente una pregunta. Dejá tus datos y te respondo personalmente.</p>
+    </div>
+    <div class="contact-card">
+      <div class="contact-info">
+        <div class="contact-item">
+          <div class="contact-icon">
+            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/><polyline points="22,6 12,13 2,6"/></svg>
+          </div>
+          <div>
+            <div class="contact-label">Email</div>
+            <div class="contact-value">brian@brianpajares.com</div>
+          </div>
+        </div>
+        <div class="contact-item">
+          <div class="contact-icon">
+            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0118 0z"/><circle cx="12" cy="10" r="3"/></svg>
+          </div>
+          <div>
+            <div class="contact-label">Disponibilidad</div>
+            <div class="contact-value">LATAM · USA · España</div>
+          </div>
+        </div>
+        <div class="contact-item">
+          <div class="contact-icon">
+            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6"><rect x="2" y="3" width="20" height="14" rx="2"/><path d="M8 21h8M12 17v4"/></svg>
+          </div>
+          <div>
+            <div class="contact-label">Temas</div>
+            <div class="contact-value">Conferencias · Consultoría · Entrevistas</div>
+          </div>
+        </div>
+      </div>
+      <form id="contactForm" class="contact-form">
+        <div class="form-row">
+          <div class="form-group">
+            <label for="contactName">Nombre completo</label>
+            <input type="text" id="contactName" required placeholder="Tu nombre" />
+          </div>
+          <div class="form-group">
+            <label for="contactEmail">Email</label>
+            <input type="email" id="contactEmail" required placeholder="tu@empresa.com" />
+          </div>
+        </div>
+        <div class="form-row">
+          <div class="form-group">
+            <label for="contactEmpresa">Empresa / Organización</label>
+            <input type="text" id="contactEmpresa" placeholder="Tu empresa (opcional)" />
+          </div>
+          <div class="form-group">
+            <label for="contactTel">Teléfono / WhatsApp</label>
+            <input type="tel" id="contactTel" placeholder="+54 11 0000-0000 (opcional)" />
+          </div>
+        </div>
+        <div class="form-group">
+          <label for="contactMsg">Mensaje</label>
+          <textarea id="contactMsg" required placeholder="¿En qué puedo ayudarte?" rows="4"></textarea>
+        </div>
+        <button type="submit" id="contactSubmitBtn" class="btn-primary" style="width:100%; justify-content:center">
+          Enviar mensaje →
+        </button>
+        <div id="contactMessage" class="lead-message" style="display:none;"></div>
+      </form>
+    </div>
+  </div>
+</section>
+
 <!-- FINAL CTA -->
 <section class="final-cta">
   <div class="container">
@@ -437,7 +510,7 @@
   </div>
 </footer>
 
-<script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2"></script>
+<script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2" defer></script>
 <script>
   // SUPABASE CONFIG
   const SUPABASE_URL = "https://guwmnpmyeynoywuhmyrd.supabase.co";
@@ -518,6 +591,48 @@
         hamburger.classList.remove('nav-hamburger--open');
         hamburger.setAttribute('aria-expanded', 'false');
       });
+    });
+  }
+
+  // FORMULARIO DE CONTACTO
+  const contactForm = document.getElementById('contactForm');
+  if (contactForm) {
+    contactForm.addEventListener('submit', async (e) => {
+      e.preventDefault();
+      const btn = document.getElementById('contactSubmitBtn');
+      const msg = document.getElementById('contactMessage');
+      const originalBtnText = btn.innerHTML;
+
+      btn.disabled = true;
+      btn.innerHTML = '<span class="loading-dots">Enviando...</span>';
+      msg.style.display = 'none';
+
+      try {
+        const { error } = await supabase.from('contacts_ceo_aumentado').insert([{
+          nombre:   document.getElementById('contactName').value,
+          email:    document.getElementById('contactEmail').value,
+          empresa:  document.getElementById('contactEmpresa').value || null,
+          telefono: document.getElementById('contactTel').value || null,
+          mensaje:  document.getElementById('contactMsg').value,
+          utm_source, utm_medium, utm_campaign, referrer
+        }]);
+        if (error) throw error;
+
+        await trackEvent('contact_submit', { email: document.getElementById('contactEmail').value });
+
+        msg.className = 'lead-message success';
+        msg.innerHTML = '¡Mensaje recibido! Brian te responderá a la brevedad.';
+        msg.style.display = 'block';
+        contactForm.reset();
+      } catch (err) {
+        console.error(err);
+        msg.className = 'lead-message error';
+        msg.innerHTML = 'Ocurrió un error. Por favor intentá de nuevo.';
+        msg.style.display = 'block';
+      } finally {
+        btn.disabled = false;
+        btn.innerHTML = originalBtnText;
+      }
     });
   }
 
