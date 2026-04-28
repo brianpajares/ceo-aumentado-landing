@@ -1,0 +1,16 @@
+# Documentos restringidos
+*.docx
+*.doc
+*.pdf
+
+# Archivos de sistema y entorno
+.DS_Store
+Thumbs.db
+.env
+.idea/
+.vscode/
+
+# Dependencias (si las hubiera)
+node_modules/
+dist/
+build/
