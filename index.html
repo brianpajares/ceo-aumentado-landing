@@ -1,843 +1,787 @@
 <!doctype html>
 <html lang="es">
+
 <head>
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <title>CEO Aumentado — Brian Pajares · La guía ejecutiva para liderar con IA</title>
-  <meta name="description" content="Cómo líderes, emprendedores y profesionales pueden convertir la inteligencia artificial en estrategia, productividad, innovación y ventaja competitiva real." />
+  <title>CEO Aumentado ΓÇö Brian Pajares ┬╖ La gu├¡a ejecutiva para liderar con IA</title>
+  <meta name="description"
+    content="C├│mo l├¡deres, emprendedores y profesionales pueden convertir la inteligencia artificial en estrategia, productividad, innovaci├│n y ventaja competitiva real." />
 
   <!-- Open Graph / Social -->
   <meta property="og:type" content="website" />
   <meta property="og:url" content="https://brianpajares.github.io/ceo-aumentado-landing/" />
-  <meta property="og:title" content="CEO Aumentado — Brian Pajares" />
-  <meta property="og:description" content="La guía ejecutiva para líderes que quieren convertir la IA en estrategia, productividad e innovación real." />
+  <meta property="og:title" content="CEO Aumentado ΓÇö Brian Pajares" />
+  <meta property="og:description"
+    content="La gu├¡a ejecutiva para l├¡deres que quieren convertir la IA en estrategia, productividad e innovaci├│n real." />
   <meta property="og:image" content="https://brianpajares.github.io/ceo-aumentado-landing/assets/portada.png" />
   <meta property="og:locale" content="es_ES" />
   <meta name="twitter:card" content="summary_large_image" />
   <meta name="twitter:site" content="@brianpajares" />
-  <meta name="twitter:title" content="CEO Aumentado — Brian Pajares" />
-  <meta name="twitter:description" content="La guía ejecutiva para líderes que quieren convertir la IA en estrategia, productividad e innovación real." />
+  <meta name="twitter:title" content="CEO Aumentado ΓÇö Brian Pajares" />
+  <meta name="twitter:description"
+    content="La gu├¡a ejecutiva para l├¡deres que quieren convertir la IA en estrategia, productividad e innovaci├│n real." />
   <meta name="twitter:image" content="https://brianpajares.github.io/ceo-aumentado-landing/assets/portada.png" />
 
   <!-- Favicon inline SVG -->
-  <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'><circle cx='16' cy='16' r='15' fill='%2304060d' stroke='%23e9b949' stroke-width='1.5'/><line x1='2' y1='16' x2='30' y2='16' stroke='%23e9b949' stroke-width='1.5'/><line x1='16' y1='2' x2='16' y2='30' stroke='%23e9b949' stroke-width='1.5'/></svg>" />
+  <link rel="icon"
+    href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'><circle cx='16' cy='16' r='15' fill='%2304060d' stroke='%23e9b949' stroke-width='1.5'/><line x1='2' y1='16' x2='30' y2='16' stroke='%23e9b949' stroke-width='1.5'/><line x1='16' y1='2' x2='16' y2='30' stroke='%23e9b949' stroke-width='1.5'/></svg>" />
 
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,500;0,600;1,400;1,500&family=Inter+Tight:wght@400;500;600;700&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
+  <link
+    href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,500;0,600;1,400;1,500&family=Inter+Tight:wght@400;500;600;700&family=JetBrains+Mono:wght@400;500&display=swap"
+    rel="stylesheet">
   <link rel="stylesheet" href="styles.css">
 </head>
+
 <body>
 
-<!-- AMAZON LINK PLACEHOLDER -->
-<script>window.AMAZON_URL = "https://www.amazon.com/dp/B0GYTJ466Y";</script>
+  <!-- AMAZON LINK PLACEHOLDER -->
+  <script>window.AMAZON_URL = "https://www.amazon.com/dp/B0GYTJ466Y";</script>
 
-<!-- NAV -->
-<nav class="nav">
-  <div class="container nav-row">
-    <div class="brand">
-      <span class="crosshair"></span>
-      <span>CEO <b>Aumentado</b></span>
+  <!-- NAV -->
+  <nav class="nav">
+    <div class="container nav-row">
+      <div class="brand">
+        <span class="crosshair"></span>
+        <span>CEO <b>Aumentado</b></span>
+      </div>
+      <div class="nav-links" id="navLinks">
+        <a href="#descubriras">Lo que descubrir├ís</a>
+        <a href="#metodo">El m├⌐todo</a>
+        <a href="#capitulos">Cap├¡tulos</a>
+        <a href="#autor">El autor</a>
+        <a href="#recursos" class="btn-nav-secondary">Cap&#237;tulo Gratis</a>
+        <a href="#contacto" class="btn-nav-outline">Contacto</a>
+      </div>
+      <a class="nav-cta" href="#comprar" onclick="goAmazon(event)">Comprar en Amazon ΓåÆ</a>
+      <button class="nav-hamburger" id="navHamburger" aria-label="Abrir men├║" aria-expanded="false">
+        <span></span><span></span><span></span>
+      </button>
     </div>
-    <div class="nav-links" id="navLinks">
-      <a href="#descubriras">Lo que descubrirás</a>
-      <a href="#metodo">El método</a>
-      <a href="#capitulos">Capítulos</a>
-      <a href="#autor">El autor</a>
-      <a href="#recursos" class="btn-nav-secondary">Capítulo Gratis</a>
-      <a href="#contacto" class="btn-nav-outline">Contacto</a>
-    </div>
-    <a class="nav-cta" href="#comprar" onclick="goAmazon(event)">Comprar en Amazon →</a>
-    <button class="nav-hamburger" id="navHamburger" aria-label="Abrir menú" aria-expanded="false">
-      <span></span><span></span><span></span>
-    </button>
-  </div>
-</nav>
+  </nav>
 
-<!-- HERO -->
-<section class="hero">
-  <div class="hero-grid"></div>
-  <div class="container hero-inner">
-    <div>
-      <span class="eyebrow"><span class="dot"></span>Nuevo · Edición 2026 · Brian Pajares</span>
-      <h1 class="hero-title">
-        La inteligencia artificial<br/>
-        <span class="gold">ya no es una tendencia.</span><br/>
-        Es tu próxima ventaja.
-      </h1>
-      <p class="hero-sub">
-        <b>CEO Aumentado</b> es la guía ejecutiva para líderes, emprendedores y profesionales que quieren convertir la IA en estrategia, productividad, innovación y crecimiento real — sin perder criterio humano.
-      </p>
-      <div class="cta-row">
-        <button class="btn-primary" onclick="goAmazon()">
-          <svg viewBox="0 0 24 24" fill="currentColor"><path d="M3 3h2l.4 2M7 13h10l4-8H5.4M7 13L5.4 5M7 13l-2 4h13M9 21a1 1 0 100-2 1 1 0 000 2zm8 0a1 1 0 100-2 1 1 0 000 2z" stroke="currentColor" stroke-width="1.6" fill="none"/></svg>
-          Comprar en Amazon
-        </button>
-        <a href="#descubriras" class="btn-secondary">Ver qué incluye →</a>
-      </div>
-      <div class="trust-row">
-        <span class="stars">★★★★★</span>
-        <span>Bestseller · Liderazgo &amp; IA</span>
-        <span class="sep"></span>
-        <span>Kindle · Tapa blanda · Audio</span>
-        <span class="sep"></span>
-        <span>+10 frameworks aplicables</span>
-      </div>
-    </div>
-    <div class="book-stage">
-      <div class="book-glow"></div>
-      <div class="book-3d">
-        <img src="assets/portada.png" alt="CEO Aumentado — portada" width="360" height="504" />
-      </div>
-      <span class="tag-orbit tag-1"><span class="pip"></span>Estrategia</span>
-      <span class="tag-orbit tag-2"><span class="pip"></span>Productividad</span>
-      <span class="tag-orbit tag-3"><span class="pip"></span>Innovación</span>
-      <span class="tag-orbit tag-4"><span class="pip"></span>Ventaja competitiva</span>
-    </div>
-  </div>
-</section>
-
-<!-- PROMISE BAR -->
-<section class="promise" style="padding-top:60px;padding-bottom:60px">
-  <div class="container">
-    <div class="promise-grid">
-      <div class="promise-item"><div class="num">10</div><div class="lbl">Capítulos prácticos</div></div>
-      <div class="promise-item"><div class="num">8</div><div class="lbl">Frameworks ejecutivos</div></div>
-      <div class="promise-item"><div class="num">90</div><div class="lbl">Días de plan de acción</div></div>
-      <div class="promise-item"><div class="num">∞</div><div class="lbl">Prompts &amp; checklists</div></div>
-    </div>
-  </div>
-</section>
-
-<!-- DESCUBRIRÁS / PILLARS -->
-<section id="descubriras">
-  <div class="container">
-    <div class="section-head">
-      <div class="kicker">Lo que descubrirás</div>
-      <h2 class="section-title">Cinco palancas para convertir la IA en <span class="it">resultados</span> medibles</h2>
-      <p class="section-sub">No es un libro para admirar la tecnología desde lejos. Es un manual para trabajar con ella.</p>
-    </div>
-    <div class="pillars">
-      <div class="pillar">
-        <div class="icon-wrap">
-          <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6"><path d="M12 2a5 5 0 00-5 5v1a4 4 0 00-2 7.4V18a2 2 0 002 2h2v-3M12 2a5 5 0 015 5v1a4 4 0 012 7.4V18a2 2 0 01-2 2h-2v-3M12 2v17"/></svg>
-        </div>
-        <h3>Decisiones aumentadas</h3>
-        <p>Pasa de la intuición aislada a un sistema inteligente: cómo usar la IA para mejorar criterio, contraste y velocidad en cada decisión clave.</p>
-      </div>
-      <div class="pillar">
-        <div class="icon-wrap">
-          <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6"><path d="M3 20h18M6 20V10m4 10V4m4 16V8m4 12v-6"/></svg>
-        </div>
-        <h3>Productividad ejecutiva</h3>
-        <p>Multiplica foco, claridad y velocidad. Diseña un sistema operativo personal que convierte horas de trabajo en minutos de ejecución.</p>
-      </div>
-      <div class="pillar">
-        <div class="icon-wrap">
-          <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6"><path d="M12 2v3m6.4 1.6l-2.1 2.1M22 12h-3m-1.6 6.4l-2.1-2.1M12 22v-3m-6.4-1.6l2.1-2.1M2 12h3m1.6-6.4l2.1 2.1"/><circle cx="12" cy="12" r="4"/></svg>
-        </div>
-        <h3>Innovación &amp; modelos de negocio</h3>
-        <p>Crea productos digitales, servicios y propuestas de valor difíciles de copiar — usando IA como palanca de creatividad y diferenciación.</p>
-      </div>
-      <div class="pillar">
-        <div class="icon-wrap">
-          <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6"><path d="M4 6h16M4 12h16M4 18h10"/><circle cx="18" cy="18" r="3"/></svg>
-        </div>
-        <h3>Equipos &amp; cultura de adopción</h3>
-        <p>Lleva la IA del uso individual al aprendizaje colectivo. Procesos, rituales y rúbricas para que tu equipo aprenda más rápido que la competencia.</p>
-      </div>
-      <div class="pillar">
-        <div class="icon-wrap">
-          <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6"><circle cx="12" cy="12" r="9"/><path d="M3 12h18M12 3a13 13 0 010 18M12 3a13 13 0 000 18"/></svg>
-        </div>
-        <h3>Operaciones que escalan</h3>
-        <p>Automatiza procesos críticos con criterio, datos confiables y revisión humana. Más capacidad sin sumar headcount proporcional.</p>
-      </div>
-      <div class="pillar">
-        <div class="icon-wrap">
-          <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6"><path d="M12 2L4 6v6c0 5 3.5 8 8 10 4.5-2 8-5 8-10V6l-8-4z"/></svg>
-        </div>
-        <h3>Gobernanza &amp; confianza</h3>
-        <p>Avanza rápido sin perder credibilidad. Reglas, límites y revisión humana para que la IA sea ventaja, no riesgo reputacional.</p>
-      </div>
-    </div>
-  </div>
-</section>
-
-<!-- METHOD -->
-<section id="metodo" style="background:linear-gradient(180deg, var(--bg-1), var(--bg-0))">
-  <div class="container">
-    <div class="section-head">
-      <div class="kicker">El método</div>
-      <h2 class="section-title">El sistema operativo del <span class="it">CEO Aumentado</span></h2>
-      <p class="section-sub">Seis movimientos que convierten experimentos sueltos en una ventaja real y duradera.</p>
-    </div>
-    <div class="chapters-wrap">
-      <div class="chapter-list" id="capitulos">
-        <div class="chapter"><span class="ch-num">01</span><span class="ch-title">La nueva frontera del liderazgo aumentado</span><span class="ch-tag">Mentalidad</span></div>
-        <div class="chapter"><span class="ch-num">02</span><span class="ch-title">El mapa estratégico de la IA en los negocios</span><span class="ch-tag">Estrategia</span></div>
-        <div class="chapter"><span class="ch-num">03</span><span class="ch-title">Productividad ejecutiva: criterio, foco y velocidad</span><span class="ch-tag">Productividad</span></div>
-        <div class="chapter"><span class="ch-num">04</span><span class="ch-title">Decisiones aumentadas: del instinto al sistema</span><span class="ch-tag">Decisiones</span></div>
-        <div class="chapter"><span class="ch-num">05</span><span class="ch-title">Innovación y modelos de negocio con IA</span><span class="ch-tag">Innovación</span></div>
-        <div class="chapter"><span class="ch-num">06</span><span class="ch-title">Equipos aumentados y cultura de adopción</span><span class="ch-tag">Cultura</span></div>
-        <div class="chapter"><span class="ch-num">07</span><span class="ch-title">Automatización, operaciones y escalabilidad</span><span class="ch-tag">Operaciones</span></div>
-        <div class="chapter"><span class="ch-num">08</span><span class="ch-title">Marketing, ventas y experiencia del cliente con IA</span><span class="ch-tag">Ventas</span></div>
-        <div class="chapter"><span class="ch-num">09</span><span class="ch-title">Riesgos, ética, gobernanza y seguridad</span><span class="ch-tag">Gobernanza</span></div>
-        <div class="chapter"><span class="ch-num">10</span><span class="ch-title">El plan de 90 días para convertirte en CEO aumentado</span><span class="ch-tag">Ejecución</span></div>
-      </div>
-      <div class="method-card">
-        <div class="label">▲ El Método CEO Aumentado</div>
-        <h4>Seis movimientos. Una transformación.</h4>
-        <div class="method-formula">
-          claridad <span class="plus">+</span> criterio <span class="plus">+</span> sistemas<br/>
-          <span class="plus">+</span> cultura <span class="plus">+</span> escala <span class="plus">+</span> gobernanza<br/>
-          <span class="eq">= liderazgo aumentado</span>
-        </div>
-        <div class="method-steps">
-          <div class="m-step"><span class="n">01</span><span class="t">Claridad <span>Define el problema correcto antes de tocar herramientas</span></span></div>
-          <div class="m-step"><span class="n">02</span><span class="t">Criterio <span>Separa hechos, supuestos, inferencias y riesgos</span></span></div>
-          <div class="m-step"><span class="n">03</span><span class="t">Sistema <span>Convierte prompts útiles en procesos repetibles</span></span></div>
-          <div class="m-step"><span class="n">04</span><span class="t">Cultura <span>Lleva la IA del uso individual al aprendizaje colectivo</span></span></div>
-          <div class="m-step"><span class="n">05</span><span class="t">Escala <span>Transforma conocimiento en activos y modelos de negocio</span></span></div>
-          <div class="m-step"><span class="n">06</span><span class="t">Gobernanza <span>Avanza rápido sin perder confianza ni control</span></span></div>
-        </div>
-      </div>
-    </div>
-  </div>
-</section>
-
-<!-- AUDIENCE -->
-<section>
-  <div class="container">
-    <div class="section-head">
-      <div class="kicker">Para quién</div>
-      <h2 class="section-title">Si lideras, decides o construyes — <span class="it">este libro es tuyo</span></h2>
-    </div>
-    <div class="audience-grid">
-      <div class="aud"><div class="check">✓</div><span>CEOs y fundadores</span></div>
-      <div class="aud"><div class="check">✓</div><span>Gerentes y directores</span></div>
-      <div class="aud"><div class="check">✓</div><span>Emprendedores digitales</span></div>
-      <div class="aud"><div class="check">✓</div><span>Consultores y asesores</span></div>
-      <div class="aud"><div class="check">✓</div><span>Líderes de innovación</span></div>
-      <div class="aud"><div class="check">✓</div><span>Profesionales independientes</span></div>
-      <div class="aud"><div class="check">✓</div><span>Inversionistas y boards</span></div>
-      <div class="aud"><div class="check">✓</div><span>Líderes de transformación</span></div>
-      <div class="aud"><div class="check">✓</div><span>Creadores de productos digitales</span></div>
-    </div>
-  </div>
-</section>
-
-<!-- AUTHOR -->
-<section id="autor" style="background:linear-gradient(180deg, var(--bg-0), var(--bg-1))">
-  <div class="container">
-    <div class="author-block">
-      <div class="author-portrait">
-        <img src="assets/autor.png" alt="Brian Pajares" class="author-img">
-        <div class="author-name"><b>BRIAN PAJARES</b><span>autor</span></div>
-      </div>
-      <div class="author-text">
-        <div class="role">Sobre el autor</div>
-        <h3>Brian Pajares</h3>
-        <p>
-          Ingeniero mecánico, ejecutivo de innovación y especialista en transformación digital y estrategia tecnológica. <b>Combina experiencia en proyectos, negocios, automatización e inteligencia artificial aplicada</b> para ayudar a profesionales y empresas a competir mejor en la nueva era digital.
+  <!-- HERO -->
+  <section class="hero">
+    <div class="hero-grid"></div>
+    <div class="container hero-inner">
+      <div>
+        <span class="eyebrow"><span class="dot"></span>Nuevo ┬╖ Edici├│n 2026 ┬╖ Brian Pajares</span>
+        <h1 class="hero-title">
+          La inteligencia artificial<br />
+          <span class="gold">ya no es una tendencia.</span><br />
+          Es tu pr├│xima ventaja.
+        </h1>
+        <p class="hero-sub">
+          <b>CEO Aumentado</b> es la gu├¡a ejecutiva para l├¡deres, emprendedores y profesionales que quieren convertir
+          la IA en estrategia, productividad, innovaci├│n y crecimiento real ΓÇö sin perder criterio humano.
         </p>
-        <p>
-          Este libro es la destilación de años llevando equipos y organizaciones a través de cambios reales — donde la tecnología solo sirve cuando se traduce en resultados.
-        </p>
-        <div class="author-creds">
-          <div class="cred"><span class="v">15+</span><span class="l">Años en innovación</span></div>
-          <div class="cred"><span class="v">200+</span><span class="l">Líderes asesorados</span></div>
-          <div class="cred"><span class="v">10</span><span class="l">Frameworks originales</span></div>
-        </div>
-      </div>
-    </div>
-  </div>
-</section>
-
-<!-- TESTIMONIALS -->
-<section>
-  <div class="container">
-    <div class="section-head">
-      <div class="kicker">Lo que dicen los lectores</div>
-      <h2 class="section-title">Lecturas que se convierten en <span class="it">decisiones</span></h2>
-    </div>
-    <div class="testi-grid">
-      <div class="testi">
-        <div class="stars">★★★★★</div>
-        <p class="testi-text">"Pasé de probar IA por curiosidad a tener un sistema de trabajo. El plan de 90 días vale el libro entero."</p>
-        <div class="testi-author">
-          <div class="testi-avatar">M</div>
-          <div class="testi-meta">
-            <span class="testi-name">Mariana Velasco</span>
-            <span class="testi-role">CEO · SaaS B2B</span>
-          </div>
-        </div>
-      </div>
-      <div class="testi">
-        <div class="stars">★★★★★</div>
-        <p class="testi-text">"Frameworks claros, sin humo. Me ayudó a rediseñar el área de operaciones en menos de un trimestre."</p>
-        <div class="testi-author">
-          <div class="testi-avatar">D</div>
-          <div class="testi-meta">
-            <span class="testi-name">Diego Restrepo</span>
-            <span class="testi-role">COO · Retail</span>
-          </div>
-        </div>
-      </div>
-      <div class="testi">
-        <div class="stars">★★★★★</div>
-        <p class="testi-text">"El capítulo de gobernanza me ahorró meses de errores. Lectura obligatoria para cualquier directorio."</p>
-        <div class="testi-author">
-          <div class="testi-avatar">L</div>
-          <div class="testi-meta">
-            <span class="testi-name">Lucía Ferraro</span>
-            <span class="testi-role">Board Member &amp; Advisor</span>
-          </div>
-        </div>
-      </div>
-    </div>
-  </div>
-</section>
-
-<!-- LEAD MAGNET -->
-<section id="recursos" style="background:linear-gradient(180deg, var(--bg-1), var(--bg-2))">
-  <div class="container">
-    <div class="lead-card">
-      <div class="lead-text">
-        <div class="kicker">Recurso Exclusivo</div>
-        <h2>Descarga el primer capítulo gratis</h2>
-        <p>Déjame tus datos y te enviaré de inmediato el PDF con el capítulo 1 de <b>CEO Aumentado</b> y la plantilla base de productividad ejecutiva.</p>
-      </div>
-      <div class="lead-form-wrap">
-        <form id="leadForm" class="lead-form">
-          <div class="form-group">
-            <label for="leadName">Nombre completo</label>
-            <input type="text" id="leadName" required placeholder="Tu nombre" />
-          </div>
-          <div class="form-group">
-            <label for="leadEmail">Email profesional</label>
-            <input type="email" id="leadEmail" required placeholder="tu@empresa.com" />
-          </div>
-          <div class="form-group">
-            <label for="leadCountry">País</label>
-            <select id="leadCountry" required>
-              <option value="" disabled selected>Selecciona tu país</option>
-              <option value="AR">Argentina</option>
-              <option value="BO">Bolivia</option>
-              <option value="CL">Chile</option>
-              <option value="CO">Colombia</option>
-              <option value="CR">Costa Rica</option>
-              <option value="EC">Ecuador</option>
-              <option value="ES">España</option>
-              <option value="MX">México</option>
-              <option value="PE">Perú</option>
-              <option value="US">Estados Unidos</option>
-              <option value="OT">Otro país</option>
-            </select>
-          </div>
-          <div class="form-group checkbox-group">
-            <input type="checkbox" id="leadConsent" required />
-            <label for="leadConsent">Acepto recibir el material y futuras comunicaciones sobre CEO Aumentado. (Cero spam, puedes darte de baja cuando quieras).</label>
-          </div>
-          <button type="submit" id="leadSubmitBtn" class="btn-primary" style="width: 100%; justify-content: center;">
-            Enviar material gratis →
+        <div class="cta-row">
+          <button class="btn-primary" onclick="goAmazon()">
+            <svg viewBox="0 0 24 24" fill="currentColor">
+              <path
+                d="M3 3h2l.4 2M7 13h10l4-8H5.4M7 13L5.4 5M7 13l-2 4h13M9 21a1 1 0 100-2 1 1 0 000 2zm8 0a1 1 0 100-2 1 1 0 000 2z"
+                stroke="currentColor" stroke-width="1.6" fill="none" />
+            </svg>
+            Comprar en Amazon
           </button>
-          <div id="leadMessage" class="lead-message" style="display:none;"></div>
+          <a href="#descubriras" class="btn-secondary">Ver qu├⌐ incluye ΓåÆ</a>
+        </div>
+        <div class="trust-row">
+          <span class="stars">ΓÿàΓÿàΓÿàΓÿàΓÿà</span>
+          <span>Bestseller ┬╖ Liderazgo &amp; IA</span>
+          <span class="sep"></span>
+          <span>Kindle ┬╖ Tapa blanda ┬╖ Audio</span>
+          <span class="sep"></span>
+          <span>+10 frameworks aplicables</span>
+        </div>
+      </div>
+      <div class="book-stage">
+        <div class="book-glow"></div>
+        <div class="book-3d">
+          <img src="assets/portada.png" alt="CEO Aumentado ΓÇö portada" width="360" height="504" />
+        </div>
+        <span class="tag-orbit tag-1"><span class="pip"></span>Estrategia</span>
+        <span class="tag-orbit tag-2"><span class="pip"></span>Productividad</span>
+        <span class="tag-orbit tag-3"><span class="pip"></span>Innovaci├│n</span>
+        <span class="tag-orbit tag-4"><span class="pip"></span>Ventaja competitiva</span>
+      </div>
+    </div>
+  </section>
+
+  <!-- PROMISE BAR -->
+  <section class="promise" style="padding-top:60px;padding-bottom:60px">
+    <div class="container">
+      <div class="promise-grid">
+        <div class="promise-item">
+          <div class="num">10</div>
+          <div class="lbl">Cap├¡tulos pr├ícticos</div>
+        </div>
+        <div class="promise-item">
+          <div class="num">8</div>
+          <div class="lbl">Frameworks ejecutivos</div>
+        </div>
+        <div class="promise-item">
+          <div class="num">90</div>
+          <div class="lbl">D├¡as de plan de acci├│n</div>
+        </div>
+        <div class="promise-item">
+          <div class="num">Γê₧</div>
+          <div class="lbl">Prompts &amp; checklists</div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- DESCUBRIR├üS / PILLARS -->
+  <section id="descubriras">
+    <div class="container">
+      <div class="section-head">
+        <div class="kicker">Lo que descubrir├ís</div>
+        <h2 class="section-title">Cinco palancas para convertir la IA en <span class="it">resultados</span> medibles
+        </h2>
+        <p class="section-sub">No es un libro para admirar la tecnolog├¡a desde lejos. Es un manual para trabajar con
+          ella.</p>
+      </div>
+      <div class="pillars">
+        <div class="pillar">
+          <div class="icon-wrap">
+            <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6">
+              <path
+                d="M12 2a5 5 0 00-5 5v1a4 4 0 00-2 7.4V18a2 2 0 002 2h2v-3M12 2a5 5 0 015 5v1a4 4 0 012 7.4V18a2 2 0 01-2 2h-2v-3M12 2v17" />
+            </svg>
+          </div>
+          <h3>Decisiones aumentadas</h3>
+          <p>Pasa de la intuici├│n aislada a un sistema inteligente: c├│mo usar la IA para mejorar criterio, contraste y
+            velocidad en cada decisi├│n clave.</p>
+        </div>
+        <div class="pillar">
+          <div class="icon-wrap">
+            <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6">
+              <path d="M3 20h18M6 20V10m4 10V4m4 16V8m4 12v-6" />
+            </svg>
+          </div>
+          <h3>Productividad ejecutiva</h3>
+          <p>Multiplica foco, claridad y velocidad. Dise├▒a un sistema operativo personal que convierte horas de trabajo
+            en minutos de ejecuci├│n.</p>
+        </div>
+        <div class="pillar">
+          <div class="icon-wrap">
+            <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6">
+              <path
+                d="M12 2v3m6.4 1.6l-2.1 2.1M22 12h-3m-1.6 6.4l-2.1-2.1M12 22v-3m-6.4-1.6l2.1-2.1M2 12h3m1.6-6.4l2.1 2.1" />
+              <circle cx="12" cy="12" r="4" />
+            </svg>
+          </div>
+          <h3>Innovaci├│n &amp; modelos de negocio</h3>
+          <p>Crea productos digitales, servicios y propuestas de valor dif├¡ciles de copiar ΓÇö usando IA como palanca
+            de creatividad y diferenciaci├│n.</p>
+        </div>
+        <div class="pillar">
+          <div class="icon-wrap">
+            <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6">
+              <path d="M4 6h16M4 12h16M4 18h10" />
+              <circle cx="18" cy="18" r="3" />
+            </svg>
+          </div>
+          <h3>Equipos &amp; cultura de adopci├│n</h3>
+          <p>Lleva la IA del uso individual al aprendizaje colectivo. Procesos, rituales y r├║bricas para que tu equipo
+            aprenda m├ís r├ípido que la competencia.</p>
+        </div>
+        <div class="pillar">
+          <div class="icon-wrap">
+            <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6">
+              <circle cx="12" cy="12" r="9" />
+              <path d="M3 12h18M12 3a13 13 0 010 18M12 3a13 13 0 000 18" />
+            </svg>
+          </div>
+          <h3>Operaciones que escalan</h3>
+          <p>Automatiza procesos cr├¡ticos con criterio, datos confiables y revisi├│n humana. M├ís capacidad sin sumar
+            headcount proporcional.</p>
+        </div>
+        <div class="pillar">
+          <div class="icon-wrap">
+            <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6">
+              <path d="M12 2L4 6v6c0 5 3.5 8 8 10 4.5-2 8-5 8-10V6l-8-4z" />
+            </svg>
+          </div>
+          <h3>Gobernanza &amp; confianza</h3>
+          <p>Avanza r├ípido sin perder credibilidad. Reglas, l├¡mites y revisi├│n humana para que la IA sea ventaja, no
+            riesgo reputacional.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- METHOD -->
+  <section id="metodo" style="background:linear-gradient(180deg, var(--bg-1), var(--bg-0))">
+    <div class="container">
+      <div class="section-head">
+        <div class="kicker">El m├⌐todo</div>
+        <h2 class="section-title">El sistema operativo del <span class="it">CEO Aumentado</span></h2>
+        <p class="section-sub">Seis movimientos que convierten experimentos sueltos en una ventaja real y duradera.</p>
+      </div>
+      <div class="chapters-wrap">
+        <div class="chapter-list" id="capitulos">
+          <div class="chapter"><span class="ch-num">01</span><span class="ch-title">La nueva frontera del liderazgo
+              aumentado</span><span class="ch-tag">Mentalidad</span></div>
+          <div class="chapter"><span class="ch-num">02</span><span class="ch-title">El mapa estrat├⌐gico de la IA en los
+              negocios</span><span class="ch-tag">Estrategia</span></div>
+          <div class="chapter"><span class="ch-num">03</span><span class="ch-title">Productividad ejecutiva: criterio,
+              foco y velocidad</span><span class="ch-tag">Productividad</span></div>
+          <div class="chapter"><span class="ch-num">04</span><span class="ch-title">Decisiones aumentadas: del instinto
+              al sistema</span><span class="ch-tag">Decisiones</span></div>
+          <div class="chapter"><span class="ch-num">05</span><span class="ch-title">Innovaci├│n y modelos de negocio con
+              IA</span><span class="ch-tag">Innovaci├│n</span></div>
+          <div class="chapter"><span class="ch-num">06</span><span class="ch-title">Equipos aumentados y cultura de
+              adopci├│n</span><span class="ch-tag">Cultura</span></div>
+          <div class="chapter"><span class="ch-num">07</span><span class="ch-title">Automatizaci├│n, operaciones y
+              escalabilidad</span><span class="ch-tag">Operaciones</span></div>
+          <div class="chapter"><span class="ch-num">08</span><span class="ch-title">Marketing, ventas y experiencia del
+              cliente con IA</span><span class="ch-tag">Ventas</span></div>
+          <div class="chapter"><span class="ch-num">09</span><span class="ch-title">Riesgos, ├⌐tica, gobernanza y
+              seguridad</span><span class="ch-tag">Gobernanza</span></div>
+          <div class="chapter"><span class="ch-num">10</span><span class="ch-title">El plan de 90 d├¡as para convertirte
+              en CEO aumentado</span><span class="ch-tag">Ejecuci├│n</span></div>
+        </div>
+        <div class="method-card">
+          <div class="label">Γû▓ El M├⌐todo CEO Aumentado</div>
+          <h4>Seis movimientos. Una transformaci├│n.</h4>
+          <div class="method-formula">
+            claridad <span class="plus">+</span> criterio <span class="plus">+</span> sistemas<br />
+            <span class="plus">+</span> cultura <span class="plus">+</span> escala <span class="plus">+</span>
+            gobernanza<br />
+            <span class="eq">= liderazgo aumentado</span>
+          </div>
+          <div class="method-steps">
+            <div class="m-step"><span class="n">01</span><span class="t">Claridad <span>Define el problema correcto
+                  antes de tocar herramientas</span></span></div>
+            <div class="m-step"><span class="n">02</span><span class="t">Criterio <span>Separa hechos, supuestos,
+                  inferencias y riesgos</span></span></div>
+            <div class="m-step"><span class="n">03</span><span class="t">Sistema <span>Convierte prompts ├║tiles en
+                  procesos repetibles</span></span></div>
+            <div class="m-step"><span class="n">04</span><span class="t">Cultura <span>Lleva la IA del uso individual al
+                  aprendizaje colectivo</span></span></div>
+            <div class="m-step"><span class="n">05</span><span class="t">Escala <span>Transforma conocimiento en activos
+                  y modelos de negocio</span></span></div>
+            <div class="m-step"><span class="n">06</span><span class="t">Gobernanza <span>Avanza r├ípido sin perder
+                  confianza ni control</span></span></div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- AUDIENCE -->
+  <section>
+    <div class="container">
+      <div class="section-head">
+        <div class="kicker">Para qui├⌐n</div>
+        <h2 class="section-title">Si lideras, decides o construyes ΓÇö <span class="it">este libro es tuyo</span></h2>
+      </div>
+      <div class="audience-grid">
+        <div class="aud">
+          <div class="check">Γ£ô</div><span>CEOs y fundadores</span>
+        </div>
+        <div class="aud">
+          <div class="check">Γ£ô</div><span>Gerentes y directores</span>
+        </div>
+        <div class="aud">
+          <div class="check">Γ£ô</div><span>Emprendedores digitales</span>
+        </div>
+        <div class="aud">
+          <div class="check">Γ£ô</div><span>Consultores y asesores</span>
+        </div>
+        <div class="aud">
+          <div class="check">Γ£ô</div><span>L├¡deres de innovaci├│n</span>
+        </div>
+        <div class="aud">
+          <div class="check">Γ£ô</div><span>Profesionales independientes</span>
+        </div>
+        <div class="aud">
+          <div class="check">Γ£ô</div><span>Inversionistas y boards</span>
+        </div>
+        <div class="aud">
+          <div class="check">Γ£ô</div><span>L├¡deres de transformaci├│n</span>
+        </div>
+        <div class="aud">
+          <div class="check">Γ£ô</div><span>Creadores de productos digitales</span>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- AUTHOR -->
+  <section id="autor" style="background:linear-gradient(180deg, var(--bg-0), var(--bg-1))">
+    <div class="container">
+      <div class="author-block">
+        <div class="author-portrait">
+          <img src="assets/autor.png" alt="Brian Pajares" class="author-img">
+          <div class="author-name"><b>BRIAN PAJARES</b><span>autor</span></div>
+        </div>
+        <div class="author-text">
+          <div class="role">Sobre el autor</div>
+          <h3>Brian Pajares</h3>
+          <p>
+            Ingeniero mec├ínico, ejecutivo de innovaci├│n y especialista en transformaci├│n digital y estrategia
+            tecnol├│gica. <b>Combina experiencia en proyectos, negocios, automatizaci├│n e inteligencia artificial
+              aplicada</b> para ayudar a profesionales y empresas a competir mejor en la nueva era digital.
+          </p>
+          <p>
+            Este libro es la destilaci├│n de a├▒os llevando equipos y organizaciones a trav├⌐s de cambios reales ΓÇö
+            donde la tecnolog├¡a solo sirve cuando se traduce en resultados.
+          </p>
+          <div class="author-creds">
+            <div class="cred"><span class="v">15+</span><span class="l">A├▒os en innovaci├│n</span></div>
+            <div class="cred"><span class="v">200+</span><span class="l">L├¡deres asesorados</span></div>
+            <div class="cred"><span class="v">10</span><span class="l">Frameworks originales</span></div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- TESTIMONIALS -->
+  <section>
+    <div class="container">
+      <div class="section-head">
+        <div class="kicker">Lo que dicen los lectores</div>
+        <h2 class="section-title">Lecturas que se convierten en <span class="it">decisiones</span></h2>
+      </div>
+      <div class="testi-grid">
+        <div class="testi">
+          <div class="stars">ΓÿàΓÿàΓÿàΓÿàΓÿà</div>
+          <p class="testi-text">"Pas├⌐ de probar IA por curiosidad a tener un sistema de trabajo. El plan de 90 d├¡as
+            vale el libro entero."</p>
+          <div class="testi-author">
+            <div class="testi-avatar">M</div>
+            <div class="testi-meta">
+              <span class="testi-name">Mariana Velasco</span>
+              <span class="testi-role">CEO ┬╖ SaaS B2B</span>
+            </div>
+          </div>
+        </div>
+        <div class="testi">
+          <div class="stars">ΓÿàΓÿàΓÿàΓÿàΓÿà</div>
+          <p class="testi-text">"Frameworks claros, sin humo. Me ayud├│ a redise├▒ar el ├írea de operaciones en menos de
+            un trimestre."</p>
+          <div class="testi-author">
+            <div class="testi-avatar">D</div>
+            <div class="testi-meta">
+              <span class="testi-name">Diego Restrepo</span>
+              <span class="testi-role">COO ┬╖ Retail</span>
+            </div>
+          </div>
+        </div>
+        <div class="testi">
+          <div class="stars">ΓÿàΓÿàΓÿàΓÿàΓÿà</div>
+          <p class="testi-text">"El cap├¡tulo de gobernanza me ahorr├│ meses de errores. Lectura obligatoria para
+            cualquier directorio."</p>
+          <div class="testi-author">
+            <div class="testi-avatar">L</div>
+            <div class="testi-meta">
+              <span class="testi-name">Luc├¡a Ferraro</span>
+              <span class="testi-role">Board Member &amp; Advisor</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- LEAD MAGNET -->
+  <section id="recursos" style="background:linear-gradient(180deg, var(--bg-1), var(--bg-2))">
+    <div class="container">
+      <div class="lead-card">
+        <div class="lead-text">
+          <div class="kicker">Recurso Exclusivo</div>
+          <h2>Descarga el primer cap├¡tulo gratis</h2>
+          <p>D├⌐jame tus datos y te enviar├⌐ de inmediato el PDF con el cap├¡tulo 1 de <b>CEO Aumentado</b> y la
+            plantilla base de productividad ejecutiva.</p>
+        </div>
+        <div class="lead-form-wrap">
+          <form id="leadForm" class="lead-form">
+            <div class="form-group">
+              <label for="leadName">Nombre completo</label>
+              <input type="text" id="leadName" required placeholder="Tu nombre" />
+            </div>
+            <div class="form-group">
+              <label for="leadEmail">Email profesional</label>
+              <input type="email" id="leadEmail" required placeholder="tu@empresa.com" />
+            </div>
+            <div class="form-group">
+              <label for="leadCountry">Pa├¡s</label>
+              <select id="leadCountry" required>
+                <option value="" disabled selected>Selecciona tu pa├¡s</option>
+                <option value="AR">Argentina</option>
+                <option value="BO">Bolivia</option>
+                <option value="CL">Chile</option>
+                <option value="CO">Colombia</option>
+                <option value="CR">Costa Rica</option>
+                <option value="EC">Ecuador</option>
+                <option value="ES">Espa├▒a</option>
+                <option value="MX">M├⌐xico</option>
+                <option value="PE">Per├║</option>
+                <option value="US">Estados Unidos</option>
+                <option value="OT">Otro pa├¡s</option>
+              </select>
+            </div>
+            <div class="form-group checkbox-group">
+              <input type="checkbox" id="leadConsent" required />
+              <label for="leadConsent">Acepto recibir el material y futuras comunicaciones sobre CEO Aumentado. (Cero
+                spam, puedes darte de baja cuando quieras).</label>
+            </div>
+            <button type="submit" id="leadSubmitBtn" class="btn-primary" style="width: 100%; justify-content: center;">
+              Enviar material gratis ΓåÆ
+            </button>
+            <div id="leadMessage" class="lead-message" style="display:none;"></div>
+          </form>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- BUY -->
+  <section class="buy-section" id="comprar">
+    <div class="container">
+      <div class="buy-card">
+        <div class="buy-cover">
+          <img src="assets/portada.png" alt="CEO Aumentado ΓÇö portada" width="280" height="392" loading="lazy" />
+        </div>
+        <div class="buy-text">
+          <div class="kicker" style="margin-bottom:12px">Disponible ahora en Amazon</div>
+          <h2>Hazte con tu copia de <span class="it">CEO Aumentado</span></h2>
+          <p>Tres formatos. Una sola misi├│n: que termines el libro con un sistema operativo nuevo, no con m├ís
+            informaci├│n.</p>
+          <div class="format-row">
+            <div class="fmt">
+              <div class="ttl">Kindle</div>
+              <div class="price">$9.99</div>
+            </div>
+            <div class="fmt">
+              <div class="ttl">Tapa blanda</div>
+              <div class="price">$29.99</div>
+            </div>
+            <div class="fmt">
+              <div class="ttl">Audiolibro</div>
+              <div class="price">$0 con prueba</div>
+            </div>
+          </div>
+          <button class="btn-primary" onclick="goAmazon()" style="width:100%; justify-content:center">
+            <svg viewBox="0 0 24 24" fill="currentColor">
+              <path
+                d="M3 3h2l.4 2M7 13h10l4-8H5.4M7 13L5.4 5M7 13l-2 4h13M9 21a1 1 0 100-2 1 1 0 000 2zm8 0a1 1 0 100-2 1 1 0 000 2z"
+                stroke="currentColor" stroke-width="1.6" fill="none" />
+            </svg>
+            Comprar en Amazon ΓåÆ
+          </button>
+          <div class="guarantee">
+            <span class="gicon">Γùå</span> Env├¡o Prime ┬╖ Devoluci├│n 30 d├¡as ┬╖ Disponible en LATAM, USA y Espa├▒a
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- FAQ -->
+  <section id="faq">
+    <div class="container">
+      <div class="section-head">
+        <div class="kicker">Preguntas frecuentes</div>
+        <h2 class="section-title">Lo que quer├⌐s saber <span class="it">antes de comprar</span></h2>
+      </div>
+      <div class="faq-wrap">
+        <details class="faq" open>
+          <summary>┬┐Necesito conocimientos t├⌐cnicos para aprovechar el libro?<span class="icn">+</span></summary>
+          <p>No. La promesa del libro es clara: no necesitas convertirte en programador para liderar con IA. S├¡
+            necesitas convertirte en mejor arquitecto de preguntas, procesos, decisiones y sistemas ΓÇö y para eso est├í
+            dise├▒ado.</p>
+        </details>
+        <details class="faq">
+          <summary>┬┐Es un libro te├│rico o aplicable?<span class="icn">+</span></summary>
+          <p>Aplicable. Cada cap├¡tulo trae frameworks, prompts, checklists y ejercicios. La estructura recomendada es
+            de 5 semanas y al final tendr├ís: diagn├│stico de oportunidades, biblioteca inicial de prompts, tres
+            procesos candidatos a automatizaci├│n, un primer caso de uso implementable, una matriz de riesgos y un plan
+            de 90 d├¡as.</p>
+        </details>
+        <details class="faq">
+          <summary>┬┐Para qu├⌐ tipo de l├¡der est├í pensado?<span class="icn">+</span></summary>
+          <p>Para fundadores, gerentes, consultores, profesionales independientes, l├¡deres de innovaci├│n y creadores
+            de productos digitales. El concepto de CEO aumentado no es un cargo, es una mentalidad: la capacidad de usar
+            IA para multiplicar claridad, velocidad, creatividad, an├ílisis y ejecuci├│n.</p>
+        </details>
+        <details class="faq">
+          <summary>┬┐En qu├⌐ formatos est├í disponible?<span class="icn">+</span></summary>
+          <p>Kindle (eBook), tapa blanda y audiolibro ΓÇö todo desde la p├ígina de Amazon. Puedes alternar formatos
+            seg├║n tu h├íbito de lectura.</p>
+        </details>
+        <details class="faq">
+          <summary>┬┐Las herramientas y prompts quedar├ín obsoletas con la velocidad de la IA?<span class="icn">+</span>
+          </summary>
+          <p>El libro no apuesta por una herramienta concreta ΓÇö apuesta por el m├⌐todo. Los frameworks (claridad,
+            criterio, sistemas, cultura, escala, gobernanza) son agn├│sticos al modelo y siguen funcionando aunque
+            cambies de proveedor o aparezca una nueva generaci├│n de IA.</p>
+        </details>
+        <details class="faq">
+          <summary>┬┐Puedo aplicarlo a mi equipo, no solo a m├¡?<span class="icn">+</span></summary>
+          <p>S├¡. Hay un cap├¡tulo espec├¡fico de equipos aumentados y cultura de adopci├│n, con rituales y r├║bricas
+            para llevar el conocimiento del uso individual al aprendizaje colectivo.</p>
+        </details>
+      </div>
+    </div>
+  </section>
+
+  <!-- CONTACT -->
+  <section id="contacto" style="background:linear-gradient(180deg, var(--bg-0), var(--bg-1))">
+    <div class="container">
+      <div class="section-head">
+        <div class="kicker">Contacto</div>
+        <h2 class="section-title">┬┐Quer├⌐s hablar con <span class="it">Brian</span>?</h2>
+        <p class="section-sub">Conferencias, consultor├¡a, entrevistas o simplemente una pregunta. Dej├í tus datos y te
+          respondo personalmente.</p>
+      </div>
+      <div class="contact-card">
+        <div class="contact-info">
+          <div class="contact-item">
+            <div class="contact-icon">
+              <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6">
+                <path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z" />
+                <polyline points="22,6 12,13 2,6" />
+              </svg>
+            </div>
+            <div>
+              <div class="contact-label">Email</div>
+              <div class="contact-value">brian@brianpajares.com</div>
+            </div>
+          </div>
+          <div class="contact-item">
+            <div class="contact-icon">
+              <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6">
+                <path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0118 0z" />
+                <circle cx="12" cy="10" r="3" />
+              </svg>
+            </div>
+            <div>
+              <div class="contact-label">Disponibilidad</div>
+              <div class="contact-value">LATAM ┬╖ USA ┬╖ Espa├▒a</div>
+            </div>
+          </div>
+          <div class="contact-item">
+            <div class="contact-icon">
+              <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6">
+                <rect x="2" y="3" width="20" height="14" rx="2" />
+                <path d="M8 21h8M12 17v4" />
+              </svg>
+            </div>
+            <div>
+              <div class="contact-label">Temas</div>
+              <div class="contact-value">Conferencias ┬╖ Consultor├¡a ┬╖ Entrevistas</div>
+            </div>
+          </div>
+        </div>
+        <form id="contactForm" class="contact-form">
+          <div class="form-row">
+            <div class="form-group">
+              <label for="contactName">Nombre completo</label>
+              <input type="text" id="contactName" required placeholder="Tu nombre" />
+            </div>
+            <div class="form-group">
+              <label for="contactEmail">Email</label>
+              <input type="email" id="contactEmail" required placeholder="tu@empresa.com" />
+            </div>
+          </div>
+          <div class="form-row">
+            <div class="form-group">
+              <label for="contactEmpresa">Empresa / Organizaci├│n</label>
+              <input type="text" id="contactEmpresa" placeholder="Tu empresa (opcional)" />
+            </div>
+            <div class="form-group">
+              <label for="contactTel">Tel├⌐fono / WhatsApp</label>
+              <input type="tel" id="contactTel" placeholder="+54 11 0000-0000 (opcional)" />
+            </div>
+          </div>
+          <div class="form-group">
+            <label for="contactMsg">Mensaje</label>
+            <textarea id="contactMsg" required placeholder="┬┐En qu├⌐ puedo ayudarte?" rows="4"></textarea>
+          </div>
+          <button type="submit" id="contactSubmitBtn" class="btn-primary" style="width:100%; justify-content:center">
+            Enviar mensaje ΓåÆ
+          </button>
+          <div id="contactMessage" class="lead-message" style="display:none;"></div>
         </form>
       </div>
     </div>
-  </div>
-</section>
+  </section>
 
-<!-- BUY -->
-<section class="buy-section" id="comprar">
-  <div class="container">
-    <div class="buy-card">
-      <div class="buy-cover">
-        <img src="assets/portada.png" alt="CEO Aumentado — portada" width="280" height="392" loading="lazy" />
-      </div>
-      <div class="buy-text">
-        <div class="kicker" style="margin-bottom:12px">Disponible ahora en Amazon</div>
-        <h2>Hazte con tu copia de <span class="it">CEO Aumentado</span></h2>
-        <p>Tres formatos. Una sola misión: que termines el libro con un sistema operativo nuevo, no con más información.</p>
-        <div class="format-row">
-          <div class="fmt"><div class="ttl">Kindle</div><div class="price">$9.99</div></div>
-          <div class="fmt"><div class="ttl">Tapa blanda</div><div class="price">$29.99</div></div>
-          <div class="fmt"><div class="ttl">Audiolibro</div><div class="price">$0 con prueba</div></div>
-        </div>
-        <button class="btn-primary" onclick="goAmazon()" style="width:100%; justify-content:center">
-          <svg viewBox="0 0 24 24" fill="currentColor"><path d="M3 3h2l.4 2M7 13h10l4-8H5.4M7 13L5.4 5M7 13l-2 4h13M9 21a1 1 0 100-2 1 1 0 000 2zm8 0a1 1 0 100-2 1 1 0 000 2z" stroke="currentColor" stroke-width="1.6" fill="none"/></svg>
-          Comprar en Amazon →
-        </button>
-        <div class="guarantee">
-          <span class="gicon">◆</span> Envío Prime · Devolución 30 días · Disponible en LATAM, USA y España
-        </div>
+  <!-- FINAL CTA -->
+  <section class="final-cta">
+    <div class="container">
+      <h2>El futuro no premiar├í a quienes acumulen herramientas.<br /><span class="gold">Premiar├í a quienes sepan
+          integrarlas.</span></h2>
+      <p>Empieza hoy. Tu pr├│xima ventaja competitiva no se compra ΓÇö se dise├▒a.</p>
+      <button class="btn-primary" onclick="goAmazon()" style="font-size:18px; padding:20px 36px">
+        <svg viewBox="0 0 24 24" fill="currentColor" width="20" height="20">
+          <path
+            d="M3 3h2l.4 2M7 13h10l4-8H5.4M7 13L5.4 5M7 13l-2 4h13M9 21a1 1 0 100-2 1 1 0 000 2zm8 0a1 1 0 100-2 1 1 0 000 2z"
+            stroke="currentColor" stroke-width="1.6" fill="none" />
+        </svg>
+        Comprar CEO Aumentado en Amazon
+      </button>
+      <div class="trust-row" style="justify-content:center; margin-top:36px">
+        <span class="stars">ΓÿàΓÿàΓÿàΓÿàΓÿà</span>
+        <span>Bestseller ┬╖ Liderazgo &amp; IA</span>
+        <span class="sep"></span>
+        <span>+200 l├¡deres asesorados</span>
       </div>
     </div>
-  </div>
-</section>
+  </section>
 
-<!-- FAQ -->
-<section id="faq">
-  <div class="container">
-    <div class="section-head">
-      <div class="kicker">Preguntas frecuentes</div>
-      <h2 class="section-title">Lo que querés saber <span class="it">antes de comprar</span></h2>
+  <footer class="footer">
+    <div class="container" style="display:flex; justify-content:space-between; flex-wrap:wrap; gap:12px; width:100%">
+      <span>┬⌐ 2026 Brian Pajares ┬╖ Todos los derechos reservados</span>
+      <span>CEO Aumentado ┬╖ Edici├│n 2026</span>
     </div>
-    <div class="faq-wrap">
-      <details class="faq" open>
-        <summary>¿Necesito conocimientos técnicos para aprovechar el libro?<span class="icn">+</span></summary>
-        <p>No. La promesa del libro es clara: no necesitas convertirte en programador para liderar con IA. Sí necesitas convertirte en mejor arquitecto de preguntas, procesos, decisiones y sistemas — y para eso está diseñado.</p>
-      </details>
-      <details class="faq">
-        <summary>¿Es un libro teórico o aplicable?<span class="icn">+</span></summary>
-        <p>Aplicable. Cada capítulo trae frameworks, prompts, checklists y ejercicios. La estructura recomendada es de 5 semanas y al final tendrás: diagnóstico de oportunidades, biblioteca inicial de prompts, tres procesos candidatos a automatización, un primer caso de uso implementable, una matriz de riesgos y un plan de 90 días.</p>
-      </details>
-      <details class="faq">
-        <summary>¿Para qué tipo de líder está pensado?<span class="icn">+</span></summary>
-        <p>Para fundadores, gerentes, consultores, profesionales independientes, líderes de innovación y creadores de productos digitales. El concepto de CEO aumentado no es un cargo, es una mentalidad: la capacidad de usar IA para multiplicar claridad, velocidad, creatividad, análisis y ejecución.</p>
-      </details>
-      <details class="faq">
-        <summary>¿En qué formatos está disponible?<span class="icn">+</span></summary>
-        <p>Kindle (eBook), tapa blanda y audiolibro — todo desde la página de Amazon. Puedes alternar formatos según tu hábito de lectura.</p>
-      </details>
-      <details class="faq">
-        <summary>¿Las herramientas y prompts quedarán obsoletas con la velocidad de la IA?<span class="icn">+</span></summary>
-        <p>El libro no apuesta por una herramienta concreta — apuesta por el método. Los frameworks (claridad, criterio, sistemas, cultura, escala, gobernanza) son agnósticos al modelo y siguen funcionando aunque cambies de proveedor o aparezca una nueva generación de IA.</p>
-      </details>
-      <details class="faq">
-        <summary>¿Puedo aplicarlo a mi equipo, no solo a mí?<span class="icn">+</span></summary>
-        <p>Sí. Hay un capítulo específico de equipos aumentados y cultura de adopción, con rituales y rúbricas para llevar el conocimiento del uso individual al aprendizaje colectivo.</p>
-      </details>
-    </div>
-  </div>
-</section>
+  </footer>
 
-<!-- CONTACT -->
-<section id="contacto" style="background:linear-gradient(180deg, var(--bg-0), var(--bg-1))">
-  <div class="container">
-    <div class="section-head">
-      <div class="kicker">Contacto</div>
-      <h2 class="section-title">¿Querés hablar con <span class="it">Brian</span>?</h2>
-      <p class="section-sub">Conferencias, consultoría, entrevistas o simplemente una pregunta. Dejá tus datos y te respondo personalmente.</p>
-    </div>
-    <div class="contact-card">
-      <div class="contact-info">
-        <div class="contact-item">
-          <div class="contact-icon">
-            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/><polyline points="22,6 12,13 2,6"/></svg>
-          </div>
-          <div>
-            <div class="contact-label">Email</div>
-            <div class="contact-value">brian@brianpajares.com</div>
-          </div>
-        </div>
-        <div class="contact-item">
-          <div class="contact-icon">
-            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0118 0z"/><circle cx="12" cy="10" r="3"/></svg>
-          </div>
-          <div>
-            <div class="contact-label">Disponibilidad</div>
-            <div class="contact-value">LATAM · USA · España</div>
-          </div>
-        </div>
-        <div class="contact-item">
-          <div class="contact-icon">
-            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6"><rect x="2" y="3" width="20" height="14" rx="2"/><path d="M8 21h8M12 17v4"/></svg>
-          </div>
-          <div>
-            <div class="contact-label">Temas</div>
-            <div class="contact-value">Conferencias · Consultoría · Entrevistas</div>
-          </div>
-        </div>
-      </div>
-      <form id="contactForm" class="contact-form">
-        <div class="form-row">
-          <div class="form-group">
-            <label for="contactName">Nombre completo</label>
-            <input type="text" id="contactName" required placeholder="Tu nombre" />
-          </div>
-          <div class="form-group">
-            <label for="contactEmail">Email</label>
-            <input type="email" id="contactEmail" required placeholder="tu@empresa.com" />
-          </div>
-        </div>
-        <div class="form-row">
-          <div class="form-group">
-            <label for="contactEmpresa">Empresa / Organización</label>
-            <input type="text" id="contactEmpresa" placeholder="Tu empresa (opcional)" />
-          </div>
-          <div class="form-group">
-            <label for="contactTel">Teléfono / WhatsApp</label>
-            <input type="tel" id="contactTel" placeholder="+54 11 0000-0000 (opcional)" />
-          </div>
-        </div>
-        <div class="form-group">
-          <label for="contactMsg">Mensaje</label>
-          <textarea id="contactMsg" required placeholder="¿En qué puedo ayudarte?" rows="4"></textarea>
-        </div>
-        <button type="submit" id="contactSubmitBtn" class="btn-primary" style="width:100%; justify-content:center">
-          Enviar mensaje →
-        </button>
-        <div id="contactMessage" class="lead-message" style="display:none;"></div>
-      </form>
-    </div>
-  </div>
-</section>
+  <script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2"></script>
+  <script>
+    // SUPABASE CONFIG
+    const SUPABASE_URL = "https://guwmnpmyeynoywuhmyrd.supabase.co";
+    const SUPABASE_PUBLIC_KEY = "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6Imd1d21ucG15ZXlub3l3dWhteXJkIiwicm9sZSI6ImFub24iLCJpYXQiOjE3NzczOTM0ODgsImV4cCI6MjA5Mjk2OTQ4OH0.SiETcYYxoK57beA8vPu9r9hUYfRp8-3RSlyFuNJ4RxQ";
+    const db = window.supabase.createClient(SUPABASE_URL, SUPABASE_PUBLIC_KEY);
 
-<!-- FINAL CTA -->
-<section class="final-cta">
-  <div class="container">
-    <h2>El futuro no premiará a quienes acumulen herramientas.<br/><span class="gold">Premiará a quienes sepan integrarlas.</span></h2>
-    <p>Empieza hoy. Tu próxima ventaja competitiva no se compra — se diseña.</p>
-    <button class="btn-primary" onclick="goAmazon()" style="font-size:18px; padding:20px 36px">
-      <svg viewBox="0 0 24 24" fill="currentColor" width="20" height="20"><path d="M3 3h2l.4 2M7 13h10l4-8H5.4M7 13L5.4 5M7 13l-2 4h13M9 21a1 1 0 100-2 1 1 0 000 2zm8 0a1 1 0 100-2 1 1 0 000 2z" stroke="currentColor" stroke-width="1.6" fill="none"/></svg>
-      Comprar CEO Aumentado en Amazon
-    </button>
-    <div class="trust-row" style="justify-content:center; margin-top:36px">
-      <span class="stars">★★★★★</span>
-      <span>Bestseller · Liderazgo &amp; IA</span>
-      <span class="sep"></span>
-      <span>+200 líderes asesorados</span>
-    </div>
-  </div>
-</section>
+    // UTILS: Captura de metadatos para atribuci├│n y anal├¡tica
+    const urlParams = new URLSearchParams(window.location.search);
+    const utm_source = urlParams.get('utm_source') || null;
+    const utm_medium = urlParams.get('utm_medium') || null;
+    const utm_campaign = urlParams.get('utm_campaign') || null;
+    const referrer = document.referrer || "direct";
+    const landing_url = window.location.href;
+    const user_agent = navigator.userAgent;
 
-<footer class="footer">
-  <div class="container" style="display:flex; justify-content:space-between; flex-wrap:wrap; gap:12px; width:100%">
-    <span>© 2026 Brian Pajares · Todos los derechos reservados</span>
-    <span>CEO Aumentado · Edición 2026</span>
-  </div>
-</footer>
-
-<script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2"></script>
-<script>
-  // SUPABASE CONFIG
-  const SUPABASE_URL = "https://guwmnpmyeynoywuhmyrd.supabase.co";
-  const SUPABASE_PUBLIC_KEY = "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6Imd1d21ucG15ZXlub3l3dWhteXJkIiwicm9sZSI6ImFub24iLCJpYXQiOjE3NzczOTM0ODgsImV4cCI6MjA5Mjk2OTQ4OH0.SiETcYYxoK57beA8vPu9r9hUYfRp8-3RSlyFuNJ4RxQ";
-  const db = window.supabase.createClient(SUPABASE_URL, SUPABASE_PUBLIC_KEY);
-
-  // UTILS: Captura de metadatos para atribución y analítica
-  const urlParams = new URLSearchParams(window.location.search);
-  const utm_source = urlParams.get('utm_source') || null;
-  const utm_medium = urlParams.get('utm_medium') || null;
-  const utm_campaign = urlParams.get('utm_campaign') || null;
-  const referrer = document.referrer || "direct";
-  const landing_url = window.location.href;
-  const user_agent = navigator.userAgent;
-
-  // FUNCIÓN GENÉRICA PARA REGISTRAR EVENTOS
-<option value="OT">Otro país</option>
-            </select>
-          </div>
-          <div class="form-group checkbox-group">
-            <input type="checkbox" id="leadConsent" required />
-            <label for="leadConsent">Acepto recibir el material y futuras comunicaciones sobre CEO Aumentado. (Cero spam, puedes darte de baja cuando quieras).</label>
-          </div>
-          <button type="submit" id="leadSubmitBtn" class="btn-primary" style="width: 100%; justify-content: center;">
-            Enviar material gratis →
-          </button>
-        </form>
-        <div id="leadMessage" class="lead-message" style="display:none;"></div>
-      </div>
-    </div>
-  </div>
-</section>
-
-<!-- BUY -->
-<section class="buy-section" id="comprar">
-  <div class="container">
-    <div class="buy-card">
-      <div class="buy-cover">
-        <img src="assets/portada.png" alt="CEO Aumentado — portada" width="280" height="392" loading="lazy" />
-      </div>
-      <div class="buy-text">
-        <div class="kicker" style="margin-bottom:12px">Disponible ahora en Amazon</div>
-        <h2>Hazte con tu copia de <span class="it">CEO Aumentado</span></h2>
-        <p>Tres formatos. Una sola misión: que termines el libro con un sistema operativo nuevo, no con más información.</p>
-        <div class="format-row">
-          <div class="fmt"><div class="ttl">Kindle</div><div class="price">$9.99</div></div>
-          <div class="fmt"><div class="ttl">Tapa blanda</div><div class="price">$29.99</div></div>
-          <div class="fmt"><div class="ttl">Audiolibro</div><div class="price">$0 con prueba</div></div>
-        </div>
-        <button class="btn-primary" onclick="goAmazon()" style="width:100%; justify-content:center">
-          <svg viewBox="0 0 24 24" fill="currentColor"><path d="M3 3h2l.4 2M7 13h10l4-8H5.4M7 13L5.4 5M7 13l-2 4h13M9 21a1 1 0 100-2 1 1 0 000 2zm8 0a1 1 0 100-2 1 1 0 000 2z" stroke="currentColor" stroke-width="1.6" fill="none"/></svg>
-          Comprar en Amazon →
-        </button>
-        <div class="guarantee">
-          <span class="gicon">◆</span> Envío Prime · Devolución 30 días · Disponible en LATAM, USA y España
-        </div>
-      </div>
-    </div>
-  </div>
-</section>
-
-<!-- FAQ -->
-<section id="faq">
-  <div class="container">
-    <div class="section-head">
-      <div class="kicker">Preguntas frecuentes</div>
-      <h2 class="section-title">Lo que querés saber <span class="it">antes de comprar</span></h2>
-    </div>
-    <div class="faq-wrap">
-      <details class="faq" open>
-        <summary>¿Necesito conocimientos técnicos para aprovechar el libro?<span class="icn">+</span></summary>
-        <p>No. La promesa del libro es clara: no necesitas convertirte en programador para liderar con IA. Sí necesitas convertirte en mejor arquitecto de preguntas, procesos, decisiones y sistemas — y para eso está diseñado.</p>
-      </details>
-      <details class="faq">
-        <summary>¿Es un libro teórico o aplicable?<span class="icn">+</span></summary>
-        <p>Aplicable. Cada capítulo trae frameworks, prompts, checklists y ejercicios. La estructura recomendada es de 5 semanas y al final tendrás: diagnóstico de oportunidades, biblioteca inicial de prompts, tres procesos candidatos a automatización, un primer caso de uso implementable, una matriz de riesgos y un plan de 90 días.</p>
-      </details>
-      <details class="faq">
-        <summary>¿Para qué tipo de líder está pensado?<span class="icn">+</span></summary>
-        <p>Para fundadores, gerentes, consultores, profesionales independientes, líderes de innovación y creadores de productos digitales. El concepto de CEO aumentado no es un cargo, es una mentalidad: la capacidad de usar IA para multiplicar claridad, velocidad, creatividad, análisis y ejecución.</p>
-      </details>
-      <details class="faq">
-        <summary>¿En qué formatos está disponible?<span class="icn">+</span></summary>
-        <p>Kindle (eBook), tapa blanda y audiolibro — todo desde la página de Amazon. Puedes alternar formatos según tu hábito de lectura.</p>
-      </details>
-      <details class="faq">
-        <summary>¿Las herramientas y prompts quedarán obsoletas con la velocidad de la IA?<span class="icn">+</span></summary>
-        <p>El libro no apuesta por una herramienta concreta — apuesta por el método. Los frameworks (claridad, criterio, sistemas, cultura, escala, gobernanza) son agnósticos al modelo y siguen funcionando aunque cambies de proveedor o aparezca una nueva generación de IA.</p>
-      </details>
-      <details class="faq">
-        <summary>¿Puedo aplicarlo a mi equipo, no solo a mí?<span class="icn">+</span></summary>
-        <p>Sí. Hay un capítulo específico de equipos aumentados y cultura de adopción, con rituales y rúbricas para llevar el conocimiento del uso individual al aprendizaje colectivo.</p>
-      </details>
-    </div>
-  </div>
-</section>
-
-<!-- CONTACT -->
-<section id="contacto" style="background:linear-gradient(180deg, var(--bg-0), var(--bg-1))">
-  <div class="container">
-    <div class="section-head">
-      <div class="kicker">Contacto</div>
-      <h2 class="section-title">¿Querés hablar con <span class="it">Brian</span>?</h2>
-      <p class="section-sub">Conferencias, consultoría, entrevistas o simplemente una pregunta. Dejá tus datos y te respondo personalmente.</p>
-    </div>
-    <div class="contact-card">
-      <div class="contact-info">
-        <div class="contact-item">
-          <div class="contact-icon">
-            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/><polyline points="22,6 12,13 2,6"/></svg>
-          </div>
-          <div>
-            <div class="contact-label">Email</div>
-            <div class="contact-value">brian@brianpajares.com</div>
-          </div>
-        </div>
-        <div class="contact-item">
-          <div class="contact-icon">
-            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0118 0z"/><circle cx="12" cy="10" r="3"/></svg>
-          </div>
-          <div>
-            <div class="contact-label">Disponibilidad</div>
-            <div class="contact-value">LATAM · USA · España</div>
-          </div>
-        </div>
-        <div class="contact-item">
-          <div class="contact-icon">
-            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6"><rect x="2" y="3" width="20" height="14" rx="2"/><path d="M8 21h8M12 17v4"/></svg>
-          </div>
-          <div>
-            <div class="contact-label">Temas</div>
-            <div class="contact-value">Conferencias · Consultoría · Entrevistas</div>
-          </div>
-        </div>
-      </div>
-      <form id="contactForm" class="contact-form">
-        <div class="form-row">
-          <div class="form-group">
-            <label for="contactName">Nombre completo</label>
-            <input type="text" id="contactName" required placeholder="Tu nombre" />
-          </div>
-          <div class="form-group">
-            <label for="contactEmail">Email</label>
-            <input type="email" id="contactEmail" required placeholder="tu@empresa.com" />
-          </div>
-        </div>
-        <div class="form-row">
-          <div class="form-group">
-            <label for="contactEmpresa">Empresa / Organización</label>
-            <input type="text" id="contactEmpresa" placeholder="Tu empresa (opcional)" />
-          </div>
-          <div class="form-group">
-            <label for="contactTel">Teléfono / WhatsApp</label>
-            <input type="tel" id="contactTel" placeholder="+54 11 0000-0000 (opcional)" />
-          </div>
-        </div>
-        <div class="form-group">
-          <label for="contactMsg">Mensaje</label>
-          <textarea id="contactMsg" required placeholder="¿En qué puedo ayudarte?" rows="4"></textarea>
-        </div>
-        <button type="submit" id="contactSubmitBtn" class="btn-primary" style="width:100%; justify-content:center">
-          Enviar mensaje →
-        </button>
-      </form>
-      <div id="contactMessage" class="lead-message" style="display:none;"></div>
-    </div>
-  </div>
-</section>
-
-<!-- FINAL CTA -->
-<section class="final-cta">
-  <div class="container">
-    <h2>El futuro no premiará a quienes acumulen herramientas.<br/><span class="gold">Premiará a quienes sepan integrarlas.</span></h2>
-    <p>Empieza hoy. Tu próxima ventaja competitiva no se compra — se diseña.</p>
-    <button class="btn-primary" onclick="goAmazon()" style="font-size:18px; padding:20px 36px">
-      <svg viewBox="0 0 24 24" fill="currentColor" width="20" height="20"><path d="M3 3h2l.4 2M7 13h10l4-8H5.4M7 13L5.4 5M7 13l-2 4h13M9 21a1 1 0 100-2 1 1 0 000 2zm8 0a1 1 0 100-2 1 1 0 000 2z" stroke="currentColor" stroke-width="1.6" fill="none"/></svg>
-      Comprar CEO Aumentado en Amazon
-    </button>
-    <div class="trust-row" style="justify-content:center; margin-top:36px">
-      <span class="stars">★★★★★</span>
-      <span>Bestseller · Liderazgo &amp; IA</span>
-      <span class="sep"></span>
-      <span>+200 líderes asesorados</span>
-    </div>
-  </div>
-</section>
-
-<footer class="footer">
-  <div class="container" style="display:flex; justify-content:space-between; flex-wrap:wrap; gap:12px; width:100%">
-    <span>© 2026 Brian Pajares · Todos los derechos reservados</span>
-    <span>CEO Aumentado · Edición 2026</span>
-  </div>
-</footer>
-
-<script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2"></script>
-<script>
-  // SUPABASE CONFIG
-  const SUPABASE_URL = "https://guwmnpmyeynoywuhmyrd.supabase.co";
-  const SUPABASE_PUBLIC_KEY = "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6Imd1d21ucG15ZXlub3l3dWhteXJkIiwicm9sZSI6ImFub24iLCJpYXQiOjE3NzczOTM0ODgsImV4cCI6MjA5Mjk2OTQ4OH0.SiETcYYxoK57beA8vPu9r9hUYfRp8-3RSlyFuNJ4RxQ";
-  const db = window.supabase.createClient(SUPABASE_URL, SUPABASE_PUBLIC_KEY);
-
-  // UTILS: Metadata
-  const urlParams = new URLSearchParams(window.location.search);
-  const utm_source = urlParams.get('utm_source') || null;
-  const utm_medium = urlParams.get('utm_medium') || null;
-  const utm_campaign = urlParams.get('utm_campaign') || null;
-  const referrer = document.referrer || "direct";
-  const landing_url = window.location.href;
-  const user_agent = navigator.userAgent;
-
-  async function trackEvent(eventName, eventData = {}) {
-    try {
-      await db.from('events_ceo_aumentado').insert([{
-        event_name: eventName,
-        utm_source, utm_medium, utm_campaign, referrer, landing_url, user_agent, event_data: eventData
-      }]);
-    } catch (err) { console.error(err); }
-  }
-
-  window.addEventListener('DOMContentLoaded', () => { trackEvent('page_view'); });
-
-  function goAmazon(e) {
-    if (e) e.preventDefault();
-    const win = window.open(window.AMAZON_URL, "_blank", "noopener,noreferrer");
-    trackEvent('amazon_click', { button: e ? e.currentTarget.innerText : 'direct' });
-    return win;
-  }
-
-  // Nav & Scroll
-  document.querySelectorAll('a[href^="#"]').forEach(a => {
-    a.addEventListener('click', e => {
-      const el = document.querySelector(a.getAttribute('href'));
-      if (el) { e.preventDefault(); el.scrollIntoView({ behavior:'smooth' }); }
-    });
-  });
-
-  const hamburger = document.getElementById('navHamburger');
-  const navLinks  = document.getElementById('navLinks');
-  if (hamburger && navLinks) {
-    hamburger.addEventListener('click', () => {
-      navLinks.classList.toggle('nav-links--open');
-      hamburger.classList.toggle('nav-hamburger--open');
-    });
-  }
-
-  // CONTACT FORM
-  const contactForm = document.getElementById('contactForm');
-  if (contactForm) {
-    contactForm.addEventListener('submit', async (e) => {
-      e.preventDefault();
-      const btn = document.getElementById('contactSubmitBtn');
-      const msg = document.getElementById('contactMessage');
-      const originalText = btn.innerHTML;
-      btn.disabled = true;
-      btn.innerHTML = 'Enviando...';
+    // FUNCI├ôN GEN├ëRICA PARA REGISTRAR EVENTOS
+    async function trackEvent(eventName, eventData = {}) {
       try {
-        const response = await fetch('/api/send-email', {
+        await db.from('events_ceo_aumentado').insert([{
+          event_name: eventName,
+          utm_source: utm_source,
+          utm_medium: utm_medium,
+          utm_campaign: utm_campaign,
+          referrer: referrer,
+          landing_url: landing_url,
+          user_agent: user_agent,
+          event_data: eventData
+        }]);
+      } catch (err) {
+        console.error("Error tracking event:", err);
+      }
+    }
+
+    // EVENTO: page_view (al cargar la p├ígina)
+    window.addEventListener('DOMContentLoaded', () => {
+      trackEvent('page_view');
+    });
+
+    // FUNCI├ôN PARA CLIC EN AMAZON
+    function goAmazon(e) {
+      if (e) e.preventDefault();
+      const win = window.open(window.AMAZON_URL, "_blank", "noopener,noreferrer");
+      trackEvent('amazon_click', {
+        button_location: e ? (e.currentTarget.innerText || e.currentTarget.textContent).trim() : 'programmatic'
+      }).catch(() => { });
+      return win;
+    }
+
+    // Smooth scroll
+    document.querySelectorAll('a[href^="#"]').forEach(a => {
+      a.addEventListener('click', e => {
+        const id = a.getAttribute('href');
+        if (id.length > 1) {
+          const el = document.querySelector(id);
+          if (el) { e.preventDefault(); el.scrollIntoView({ behavior: 'smooth', block: 'start' }); }
+        }
+      });
+    });
+
+    // Hamburger menu
+    const hamburger = document.getElementById('navHamburger');
+    const navLinks = document.getElementById('navLinks');
+    if (hamburger && navLinks) {
+      hamburger.addEventListener('click', () => {
+        const open = navLinks.classList.toggle('nav-links--open');
+        hamburger.classList.toggle('nav-hamburger--open', open);
+      });
+    }
+
+    // FORMULARIO DE CONTACTO
+    const contactForm = document.getElementById('contactForm');
+    if (contactForm) {
+      contactForm.addEventListener('submit', async (e) => {
+        e.preventDefault();
+        const btn = document.getElementById('contactSubmitBtn');
+        const msg = document.getElementById('contactMessage');
+        const originalBtnText = btn.innerHTML;
+        btn.disabled = true;
+        btn.innerHTML = 'Enviando...';
+        try {
+          const response = await fetch('/api/send-email', {
+            method: 'POST',
+            headers: { 'Content-Type': 'application/json' },
+            body: JSON.stringify({
+              type: 'contact',
+              nombre: document.getElementById('contactName').value,
+              email: document.getElementById('contactEmail').value,
+              empresa: document.getElementById('contactEmpresa').value || null,
+              telefono: document.getElementById('contactTel').value || null,
+              mensaje: document.getElementById('contactMsg').value,
+              metadata: { utm_source, utm_medium, utm_campaign, referrer }
+            })
+          });
+          if (!response.ok) throw new Error();
+          msg.className = 'lead-message success';
+          msg.innerHTML = '┬íMensaje recibido! Te responder├⌐ pronto.';
+          msg.style.display = 'block';
+          contactForm.reset();
+        } catch (err) {
+          msg.className = 'lead-message error';
+          msg.innerHTML = 'Error. Intenta de nuevo.';
+          msg.style.display = 'block';
+        } finally {
+          btn.disabled = false;
+          btn.innerHTML = originalBtnText;
+        }
+      });
+    }
+
+    // FORMULARIO DE LEADS (Capítulo Gratis) - DESCARGA INMEDIATA
+    const leadForm = document.getElementById('leadForm');
+    if (leadForm) {
+      leadForm.addEventListener('submit', async (e) => {
+        e.preventDefault();
+        const btn = document.getElementById('leadSubmitBtn');
+        const msg = document.getElementById('leadMessage');
+        btn.disabled = true;
+        btn.innerHTML = 'Procesando...';
+        const nombre = document.getElementById('leadName').value;
+        const email = document.getElementById('leadEmail').value;
+        const pais = document.getElementById('leadCountry').value;
+        const consentimiento = document.getElementById('leadConsent').checked;
+        // Mostrar enlace de descarga INMEDIATAMENTE sin esperar API
+        leadForm.style.display = 'none';
+        msg.className = 'lead-message success';
+        msg.innerHTML = '<strong>¡Registro exitoso!</strong><br/>Descarga tu capítulo gratis:<br/><a href="https://drive.google.com/file/d/1GTsGTPQChHbyYxTOacs5BGbBGMmldZB2/view?usp=drive_link" target="_blank" rel="noopener" style="display:inline-block;margin-top:16px;padding:14px 28px;background:#e9b949;color:#000;font-weight:700;text-decoration:none;border-radius:6px;font-size:15px;">📥 Descargar Capítulo 1 →</a>';
+        msg.style.display = 'block';
+        // Guardar en background
+        fetch('/api/send-email', {
           method: 'POST',
           headers: { 'Content-Type': 'application/json' },
-          body: JSON.stringify({
-            type: 'contact',
-            nombre: document.getElementById('contactName').value,
-            email: document.getElementById('contactEmail').value,
-            empresa: document.getElementById('contactEmpresa').value || null,
-            telefono: document.getElementById('contactTel').value || null,
-            mensaje: document.getElementById('contactMsg').value,
-            metadata: { utm_source, utm_medium, utm_campaign, referrer }
-          })
-        });
-        if (!response.ok) throw new Error();
-        msg.className = 'lead-message success';
-        msg.innerHTML = '¡Mensaje recibido! Te responderé pronto.';
-        msg.style.display = 'block';
-        contactForm.reset();
-      } catch (err) {
-        msg.className = 'lead-message error';
-        msg.innerHTML = 'Error. Intenta de nuevo.';
-        msg.style.display = 'block';
-      } finally {
-        btn.disabled = false;
-        btn.innerHTML = originalText;
-      }
-    });
-  }
-
-  // LEAD FORM
-  const leadForm = document.getElementById('leadForm');
-  if (leadForm) {
-    leadForm.addEventListener('submit', async (e) => {
-      e.preventDefault();
-      const btn = document.getElementById('leadSubmitBtn');
-      const msg = document.getElementById('leadMessage');
-      btn.disabled = true;
-      btn.innerHTML = 'Procesando...';
-
-      const nombre = document.getElementById('leadName').value;
-      const email  = document.getElementById('leadEmail').value;
-      const pais   = document.getElementById('leadCountry').value;
-      const consentimiento = document.getElementById('leadConsent').checked;
-
-      // PASO 1: Mostrar descarga INMEDIATAMENTE, sin esperar API
-      leadForm.style.display = 'none';
-      msg.className = 'lead-message success';
-      msg.innerHTML = `
-        <strong>¡Registro exitoso!</strong><br/>
-        Haz clic aquí para acceder a tu Capítulo 1 gratis:<br/>
-        <a href="https://drive.google.com/file/d/1GTsGTPQChHbyYxTOacs5BGbBGMmldZB2/view?usp=drive_link"
-           target="_blank" rel="noopener"
-           style="display:inline-block;margin-top:16px;padding:14px 28px;background:#e9b949;color:#000;font-weight:700;text-decoration:none;border-radius:6px;font-size:15px;">
-          Descargar Capitulo 1
-        </a>
-      `;
-      msg.style.display = 'block';
-
-      // PASO 2: Guardar lead en background (no bloquea al usuario)
-      fetch('/api/send-email', {
-        method: 'POST',
-        headers: { 'Content-Type': 'application/json' },
-        body: JSON.stringify({
-          type: 'lead',
-          nombre, email, pais, consentimiento,
-          metadata: { utm_source, utm_medium, utm_campaign, referrer, landing_url, user_agent }
-        })
-      }).catch(() => {});
-    });
-  }
-</script>
+          body: JSON.stringify({ type: 'lead', nombre, email, pais, consentimiento, metadata: { utm_source, utm_medium, utm_campaign, referrer, landing_url, user_agent } })
+        }).catch(() => { });
+      });
+    }
+  </script>
 
 </body>
+
 </html>
