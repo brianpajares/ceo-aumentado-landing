@@ -558,6 +558,24 @@ section + section { border-top: 1px solid var(--line); }
 }
 .method-formula .plus { color: var(--gold); }
 .method-formula .eq { color: var(--cyan); }
+.lead-message {
+  margin-top: 20px;
+  padding: 20px;
+  border-radius: 8px;
+  font-size: 14px;
+  line-height: 1.6;
+  text-align: center;
+}
+.lead-message.success {
+  background: rgba(233, 185, 73, 0.1);
+  border: 1px solid var(--gold);
+  color: #fff;
+}
+.lead-message.error {
+  background: rgba(255, 0, 0, 0.1);
+  border: 1px solid #ff4444;
+  color: #ff4444;
+}
 .method-steps { display: flex; flex-direction: column; gap: 12px; }
 .m-step { display: flex; gap: 14px; align-items: flex-start; }
 .m-step .n {
