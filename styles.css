@@ -478,7 +478,6 @@ section + section { border-top: 1px solid var(--line); }
   border: 1px solid var(--line);
   border-radius: 14px;
   padding: 36px;
-  position: relative;
   overflow: hidden;
 }
 .method-card::before {
@@ -1055,11 +1054,64 @@ details.faq p {
   gap: 12px;
 }
 
+/* ───────── Focus accessibility ───────── */
+:focus-visible {
+  outline: 2px solid var(--gold);
+  outline-offset: 3px;
+  border-radius: 4px;
+}
+
+/* ───────── Hamburger ───────── */
+.nav-hamburger {
+  display: none;
+  flex-direction: column;
+  justify-content: center;
+  gap: 5px;
+  width: 36px;
+  height: 36px;
+  background: transparent;
+  border: 1px solid var(--line-2);
+  border-radius: 6px;
+  padding: 6px;
+  cursor: pointer;
+}
+.nav-hamburger span {
+  display: block;
+  height: 1.5px;
+  background: var(--ink-1);
+  border-radius: 2px;
+  transition: transform 0.25s, opacity 0.25s;
+}
+.nav-hamburger--open span:nth-child(1) { transform: translateY(6.5px) rotate(45deg); }
+.nav-hamburger--open span:nth-child(2) { opacity: 0; }
+.nav-hamburger--open span:nth-child(3) { transform: translateY(-6.5px) rotate(-45deg); }
+
 /* ───────── Responsive ───────── */
 @media (max-width: 1000px) {
   .hero-inner, .chapters-wrap, .author-block, .buy-card, .lead-card { grid-template-columns: 1fr; gap: 50px; }
   .pillars, .audience-grid, .testi-grid, .promise-grid { grid-template-columns: 1fr 1fr; }
   .nav-links { display: none; }
+  .nav-links.nav-links--open {
+    display: flex;
+    flex-direction: column;
+    gap: 0;
+    position: absolute;
+    top: 100%;
+    left: 0;
+    right: 0;
+    background: rgba(4, 6, 13, 0.97);
+    backdrop-filter: blur(14px);
+    -webkit-backdrop-filter: blur(14px);
+    border-bottom: 1px solid var(--line);
+    padding: 12px 32px 20px;
+  }
+  .nav-links.nav-links--open a {
+    padding: 14px 0;
+    border-bottom: 1px solid var(--line);
+    font-size: 15px;
+  }
+  .nav-hamburger { display: flex; }
+  .nav-row { position: relative; }
   .author-block, .buy-card, .lead-card { padding: 36px; }
   .method-card { position: static; }
   .book-stage { min-height: 480px; }
@@ -1071,4 +1123,5 @@ details.faq p {
   .trust-row { gap: 14px; }
   .trust-row .sep { display: none; }
   section { padding: 70px 0; }
+  .nav-cta { display: none; }
 }
