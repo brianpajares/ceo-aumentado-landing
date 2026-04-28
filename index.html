@@ -803,39 +803,38 @@
       e.preventDefault();
       const btn = document.getElementById('leadSubmitBtn');
       const msg = document.getElementById('leadMessage');
-      const originalText = btn.innerHTML;
       btn.disabled = true;
-      btn.innerHTML = 'Enviando...';
-      try {
-        const response = await fetch('/api/send-email', {
-          method: 'POST',
-          headers: { 'Content-Type': 'application/json' },
-          body: JSON.stringify({
-            type: 'lead',
-            nombre: document.getElementById('leadName').value,
-            email: document.getElementById('leadEmail').value,
-            pais: document.getElementById('leadCountry').value,
-            consentimiento: document.getElementById('leadConsent').checked,
-            metadata: { utm_source, utm_medium, utm_campaign, referrer, landing_url, user_agent }
-          })
-        });
-        if (!response.ok) throw new Error();
-        msg.className = 'lead-message success';
-        msg.innerHTML = `
-          <strong>¡Registro exitoso!</strong><br/>
-          Descarga tu capítulo gratis aquí:<br/>
-          <a href="https://drive.google.com/file/d/1GTsGTPQChHbyYxTOacs5BGbBGMmldZB2/view?usp=drive_link" target="_blank" style="display:inline-block; margin-top:15px; padding:12px 24px; background:#e9b949; color:#000; font-weight:bold; text-decoration:none; border-radius:4px;">Descargar Capítulo 1 →</a>
-        `;
-        msg.style.display = 'block';
-        leadForm.style.display = 'none';
-      } catch (err) {
-        msg.className = 'lead-message error';
-        msg.innerHTML = 'Error de conexión. Intenta de nuevo.';
-        msg.style.display = 'block';
-      } finally {
-        btn.disabled = false;
-        btn.innerHTML = originalText;
-      }
+      btn.innerHTML = 'Procesando...';
+
+      const nombre = document.getElementById('leadName').value;
+      const email  = document.getElementById('leadEmail').value;
+      const pais   = document.getElementById('leadCountry').value;
+      const consentimiento = document.getElementById('leadConsent').checked;
+
+      // PASO 1: Mostrar descarga INMEDIATAMENTE, sin esperar API
+      leadForm.style.display = 'none';
+      msg.className = 'lead-message success';
+      msg.innerHTML = `
+        <strong>¡Registro exitoso!</strong><br/>
+        Haz clic aquí para acceder a tu Capítulo 1 gratis:<br/>
+        <a href="https://drive.google.com/file/d/1GTsGTPQChHbyYxTOacs5BGbBGMmldZB2/view?usp=drive_link"
+           target="_blank" rel="noopener"
+           style="display:inline-block;margin-top:16px;padding:14px 28px;background:#e9b949;color:#000;font-weight:700;text-decoration:none;border-radius:6px;font-size:15px;">
+          Descargar Capitulo 1
+        </a>
+      `;
+      msg.style.display = 'block';
+
+      // PASO 2: Guardar lead en background (no bloquea al usuario)
+      fetch('/api/send-email', {
+        method: 'POST',
+        headers: { 'Content-Type': 'application/json' },
+        body: JSON.stringify({
+          type: 'lead',
+          nombre, email, pais, consentimiento,
+          metadata: { utm_source, utm_medium, utm_campaign, referrer, landing_url, user_agent }
+        })
+      }).catch(() => {});
     });
   }
 </script>
